@@ -6,7 +6,7 @@ const svg = d3.select("#diagram")
     .attr("width", width)
     .attr("height", height);
 
-const g = svg.append("g");
+const global_group = svg.append("g");
 
 const zoom = d3.zoom()
     .scaleExtent([0.5, 5])
@@ -69,7 +69,7 @@ const data = {
     ]
 };
 
-const circles = g.selectAll("g")
+const circles = global_group.selectAll("g")
     .data(data.circles)
     .enter()
     .append("g");
