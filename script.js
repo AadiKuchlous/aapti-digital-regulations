@@ -38,7 +38,7 @@ circles.append("circle")
 
 circles.append("text")
     .attr("x", d => d.x)
-    .attr("y", d => d.y - d.radius + 20)
+    .attr("y", d => d.y - (d.radius / 2))
     .attr("text-anchor", "middle")
     .attr("class", "circle-title")
     .text(d => d.title);
