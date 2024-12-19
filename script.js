@@ -1,20 +1,30 @@
 import { data } from "./data.js";
+import { min } from "./utils.js";
 
 const height = window.innerHeight;
 const width = window.innerWidth;
 
 const RECT_WIDTH = 100;
 const RECT_HEIGHT = RECT_WIDTH / 2;
+const GLOBAL_CIRCLE_RADIUS = min(width, height) / 2;
+const GLOBAL_CIRCLE_COORDS = {x: width / 2, y: height / 2};
 
 const svg = d3.select("#diagram")
     .append("svg")
     .attr("width", width)
     .attr("height", height);
 
+
 const global_group = svg.append("g");
 
-svg.attr("fill", "black");
+// Add a white circle to the center of the diagram
+const global_circle = global_group.append("circle")
+  .attr("cx", GLOBAL_CIRCLE_COORDS.x)
+  .attr("cy", GLOBAL_CIRCLE_COORDS.y)
+  .attr("r", GLOBAL_CIRCLE_RADIUS)
+  .attr("fill", "white");
 
+// Add zoom functionality
 const zoom = d3.zoom()
     .scaleExtent([0.5, 5])
     .on("zoom", (event) => {
@@ -23,11 +33,13 @@ const zoom = d3.zoom()
 
 svg.call(zoom);
 
+// Create a group for each circle with the data
 const circles = global_group.selectAll("g")
     .data(data.circles)
     .enter()
     .append("g");
 
+// Add a circle for each group
 circles.append("circle")
     .attr("cx", d => d.x)
     .attr("cy", d => d.y)
@@ -36,6 +48,7 @@ circles.append("circle")
     .attr("opacity", 0.5)
     .attr("class", "circle");
 
+// Add a title to each circle
 circles.append("text")
     .attr("x", d => d.x)
     .attr("y", d => d.y - (d.radius / 2))
@@ -43,6 +56,8 @@ circles.append("text")
     .attr("class", "circle-title")
     .text(d => d.title);
 
+
+//Add a group for each box in each circle with the data and onclick event
 const boxes = circles.selectAll("g")
     .data(d => d.boxes)
     .enter()
@@ -53,6 +68,7 @@ const boxes = circles.selectAll("g")
         showSideModal(d.title, d.content);
     });
 
+// Add a rectangle and text to each box
 boxes.append("rect")
     .attr("x", -(RECT_WIDTH / 2))
     .attr("y", -(RECT_HEIGHT / 2))
