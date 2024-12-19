@@ -1,7 +1,7 @@
 import { data } from "./data.js";
 
-const width = window.innerWidth;
 const height = window.innerHeight;
+const width = height;
 
 const svg = d3.select("#diagram")
     .append("svg")
@@ -9,6 +9,8 @@ const svg = d3.select("#diagram")
     .attr("height", height);
 
 const global_group = svg.append("g");
+
+svg.attr("fill", "black");
 
 const zoom = d3.zoom()
     .scaleExtent([0.5, 5])
