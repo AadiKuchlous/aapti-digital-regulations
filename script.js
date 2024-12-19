@@ -1,5 +1,5 @@
 import { data } from "./data.js";
-import { min } from "./utils.js";
+import { min, calculateCoordFromRelative, calculateRelativeValue } from "./utils.js";
 
 const height = window.innerHeight;
 const width = window.innerWidth;
@@ -41,9 +41,9 @@ const circles = global_group.selectAll("g")
 
 // Add a circle for each group
 circles.append("circle")
-    .attr("cx", d => d.x)
-    .attr("cy", d => d.y)
-    .attr("r", d => d.radius)
+    .attr("cx", d => calculateCoordFromRelative(d.x, Number(global_circle.attr("cx")), Number(global_circle.attr("r"))*2))
+    .attr("cy", d => calculateCoordFromRelative(d.y, Number(global_circle.attr("cy")), Number(global_circle.attr("r"))*2))
+    .attr("r", d => calculateRelativeValue(d.radius, Number(global_circle.attr("r"))))
     .attr("fill", d => d.color)
     .attr("opacity", 0.5)
     .attr("class", "circle");
