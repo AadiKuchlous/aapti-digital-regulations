@@ -3,6 +3,9 @@ import { data } from "./data.js";
 const height = window.innerHeight;
 const width = height;
 
+const RECT_WIDTH = 100;
+const RECT_HEIGHT = RECT_WIDTH / 2;
+
 const svg = d3.select("#diagram")
     .append("svg")
     .attr("width", width)
@@ -51,10 +54,10 @@ const boxes = circles.selectAll("g")
     });
 
 boxes.append("rect")
-    .attr("x", -50)
-    .attr("y", -25)
-    .attr("width", 100)
-    .attr("height", 50)
+    .attr("x", -(RECT_WIDTH / 2))
+    .attr("y", -(RECT_HEIGHT / 2))
+    .attr("width", RECT_WIDTH)
+    .attr("height", RECT_HEIGHT)
     .attr("rx", 4);
 
 boxes.append("text")
