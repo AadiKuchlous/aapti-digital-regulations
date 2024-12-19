@@ -46,12 +46,13 @@ circles.append("circle")
     .attr("r", d => calculateRelativeValue(d.radius, Number(global_circle.attr("r"))))
     .attr("fill", d => d.color)
     .attr("opacity", 0.5)
-    .attr("class", "circle");
+    .attr("class", "circle")
+    .attr("id", d => d.id);
 
 // Add a title to each circle
 circles.append("text")
-    .attr("x", d => d.x)
-    .attr("y", d => d.y - (d.radius / 2))
+    .attr("x", d => calculateCoordFromRelative(0, Number(d3.select(`#${d.id}`).attr("cx")), Number(d3.select(`#${d.id}`).attr("r"))))
+    .attr("y", d => calculateCoordFromRelative(-0.6, Number(d3.select(`#${d.id}`).attr("cy")), Number(d3.select(`#${d.id}`).attr("r"))))
     .attr("text-anchor", "middle")
     .attr("class", "circle-title")
     .text(d => d.title);
@@ -63,6 +64,7 @@ const boxes = circles.selectAll("g")
     .enter()
     .append("g")
     .attr("class", "box")
+    .attr("id", d => d.id)
     .attr("transform", d => `translate(${d.x}, ${d.y})`)
     .on("click", (event, d) => {
         showSideModal(d.title, d.content);
