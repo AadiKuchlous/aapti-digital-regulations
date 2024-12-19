@@ -1,7 +1,7 @@
 import { data } from "./data.js";
 
 const height = window.innerHeight;
-const width = height;
+const width = window.innerWidth;
 
 const RECT_WIDTH = 100;
 const RECT_HEIGHT = RECT_WIDTH / 2;
