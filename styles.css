@@ -35,6 +35,58 @@ body {
   dominant-baseline: middle;
 }
 
+.box-content {
+  padding: 1em;
+  background-color: white;
+  height: fit-content;
+  border-radius: 0.7em;
+  font-size: 1.5em;
+}
+
+.box-type {
+  font-weight: normal;
+  width: fit-content;
+  color: white;
+  border-radius: 0.2em;
+  padding: 0.3em;
+}
+
+.box-type-framework {
+  background-color: rgba(250,199,13,255);
+}
+
+.box-type-legislation {
+  background-color: rgba(87,95,186,255);
+}
+
+.box-type-policy {
+  background-color: rgba(149,212,88,255);
+}
+
+.box-type-rules {
+  background-color: rgba(241,77,46,255);
+}
+
+.box-type-direction {
+  background-color: rgba(30,172,144,255);
+}
+
+.box-type-guideline {
+  background-color: rgba(30,172,144,255); /* TODO: Change to different red color */
+}
+
+.box-type-infrastructure {
+  background-color: rgba(23,205,212,255);
+}
+
+.box-type-order {
+  background-color: rgba(0,0,0,255);
+}
+
+.box-type-standards {
+  background-color: rgba(169,63,188,255);
+}
+
 .side-modal {
   position: fixed;
   right: -400px;
