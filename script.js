@@ -5,7 +5,7 @@ const height = window.innerHeight * 10;
 const width = window.innerWidth * 10;
 
 const RECT_WIDTH = window.innerWidth / 5;
-const RECT_HEIGHT = RECT_WIDTH / 2;
+const RECT_HEIGHT = RECT_WIDTH * 2;
 const GLOBAL_CIRCLE_RADIUS = min(width, height) / 2;
 const GLOBAL_CIRCLE_COORDS = {x: width / 2, y: height / 2};
 
@@ -24,7 +24,7 @@ const global_circle = global_group.append("circle")
   .attr("cx", GLOBAL_CIRCLE_COORDS.x)
   .attr("cy", GLOBAL_CIRCLE_COORDS.y)
   .attr("r", GLOBAL_CIRCLE_RADIUS)
-  .attr("fill", "white");
+  .attr("fill", "rgba(0,0,0,0)");
 
 // Add zoom functionality
 const zoom = d3.zoom()
@@ -64,7 +64,7 @@ circles.append("circle")
 // Add a title to each circle
 circles.append("text")
     .attr("x", d => calculateCoordFromRelative(0, Number(d3.select(`#${d.id}`).attr("cx")), Number(d3.select(`#${d.id}`).attr("r"))))
-    .attr("y", d => calculateCoordFromRelative(d.title_low?0.6:-0.6, Number(d3.select(`#${d.id}`).attr("cy")), Number(d3.select(`#${d.id}`).attr("r"))))
+    .attr("y", d => calculateCoordFromRelative(d.title_low?0.7:-0.6, Number(d3.select(`#${d.id}`).attr("cy")), Number(d3.select(`#${d.id}`).attr("r"))))
     .attr("text-anchor", "middle")
     .attr("font-size", "4em")
     .attr("class", "circle-title")
@@ -126,13 +126,18 @@ boxes.append("foreignObject")
     .append("xhtml:div")
     .attr("class", "box-content")
     .text(d => d.title)
-    .append("div")
-    .attr("class", d => {
+    .append(d => {
+      let div = document.createElement("div");
+      div.classList.add("box-types-container");
       let types = d.type.split(", ");
-      return types.map(type => `box-type-${type.toLowerCase()}`).join(" ") + " box-type";
-    })
-    .text(d => d.type);
-
+      for (let i = 0; i < types.length; i++) {
+        let span = document.createElement("div");
+        span.textContent = types[i];
+        span.className = `box-type-${types[i].toLowerCase()} box-type`;
+        div.appendChild(span);
+      }
+      return div;
+    });
 
 
 let mySVG = document.getElementById("global-group");
@@ -153,6 +158,8 @@ function showSideModal(data) {
     modalTitle.textContent = data.title;
     modalContent.textContent = data.description;
     modalDate.textContent = data.initial_year_of_publication;
+    modalLink.href = data.link;
+    modalLink.textContent = data.link;
     sideModal.classList.add("open");
 
     closeBtn.onclick = function() {

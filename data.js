@@ -18,42 +18,42 @@ const data = {
             {
               "id": "it1",
               "x": -0.35,
-              "y": -0.35,
+              "y": -0.25,
             },
             {
               "id": "it2",
               "x": 0,
-              "y": 0.1,
+              "y": 0.2,
             },
             {
               "id": "it3",
               "x": -0.6,
-              "y": -0.1,
+              "y": 0,
             },
             {
               "id": "it4",
               "x": -0.45,
-              "y": 0.27,
+              "y": 0.37,
             },
             {
               "id": "it5",
               "x": 0.3,
-              "y": -0.27,
+              "y": -0.17,
             },
             {
               "id": "it6",
               "x": -0.2,
-              "y": 0.55,
+              "y": 0.65,
             },
             {
               "id": "it7",
               "x": 0.15,
-              "y": 0.45,
+              "y": 0.55,
             },
             {
               "id": "it8",
-              "x": 0.65,
-              "y": 0.3,
+              "x": 0.67,
+              "y": 0.55,
             }
           ]
       },
@@ -68,12 +68,12 @@ const data = {
             {
               "id": "agriculture1",
               "x": -0.45,
-              "y": -0.35,
+              "y": -0.15,
             },
             {
               "id": "agriculture2",
               "x": 0.3,
-              "y": 0,
+              "y": 0.1,
             }
           ]
       },
@@ -93,17 +93,17 @@ const data = {
             {
               "id": "health2",
               "x": -0.75,
-              "y": 0.15,
+              "y": 0.4,
             },
             {
               "id": "health3",
               "x": -0.65,
-              "y": 0.4,
+              "y": 0.6,
             },
             {
               "id": "health4",
               "x": -0.45,
-              "y": 0.65,
+              "y": 0.9,
             },
             {
               "id": "health5",
@@ -113,7 +113,7 @@ const data = {
             {
               "id": "health6",
               "x": 0.7,
-              "y": -0.2,
+              "y": 0,
             }
           ]
       },
@@ -138,12 +138,12 @@ const data = {
           {
             "id": "data3",
             "x": -0.22,
-            "y": 0.2,
+            "y": 0.37,
           },
           {
             "id": "data4",
             "x": -0.1,
-            "y": 0.32,
+            "y": 0.55,
           },
           {
             "id": "data5",
@@ -173,37 +173,37 @@ const data = {
         {
           "id": "education1",
           "x": 0.45,
-          "y": 0,
+          "y": 0.15,
         },
         {
           "id": "education2",
           "x": -0.2,
-          "y": 0,
+          "y": 0.15,
         },
         {
           "id": "education3",
           "x": 0.2,
-          "y": 0.2,
+          "y": 0.35,
         },
         {
           "id": "education4",
           "x": -0.4,
-          "y": 0.3,
+          "y": 0.45,
         },
         {
           "id": "education5",
           "x": -0.2,
-          "y": 0.6,
+          "y": 0.75,
         },
         {
           "id": "education6",
           "x": 0.4,
-          "y": 0.55,
+          "y": 0.7,
         },
         {
           "id": "education7",
           "x": 0,
-          "y": 0.9,
+          "y": 1.05,
         }
       ]
     },
@@ -217,13 +217,13 @@ const data = {
       boxes: [
         {
           "id": "ai1",
-          "x": -0.45,
-          "y": 0.2,
+          "x": -0.55,
+          "y": 0.6,
         },
         {
           "id": "ai2",
           "x": 0.5,
-          "y": 0,
+          "y": 0.4,
         }
       ]
     },
@@ -238,7 +238,7 @@ const data = {
         {
           "id": "broadcast1",
           "x": -0.82,
-          "y": -0.1,
+          "y": 0.1,
         },
         {
           "id": "broadcast2",
@@ -273,27 +273,27 @@ const data = {
         {
           "id": "finance1",
           "x": -0.55,
-          "y": -0.5,
+          "y": -0.2,
         },
         {
           "id": "finance2",
-          "x": -0.1,
-          "y": -0.4,
+          "x": 0,
+          "y": -0.2,
         },
         {
           "id": "finance3",
           "x": -0.3,
-          "y": -0.13,
+          "y": 0.1,
         },
         {
           "id": "finance4",
           "x": 0.35,
-          "y": -0.1,
+          "y": 0.1,
         },
         {
           "id": "finance5",
-          "x": -0.55,
-          "y": 0.08,
+          "x": -0.65,
+          "y": 0.35,
         }
       ]
     },
@@ -308,12 +308,12 @@ const data = {
         {
           "id": "cyber1",
           "x": -0.2,
-          "y": -0.4,
+          "y": -0.2,
         },
         {
           "id": "cyber2",
           "x": -0.7,
-          "y": -0,
+          "y": 0.2,
         },
         {
           "id": "cyber3",
@@ -323,12 +323,12 @@ const data = {
         {
           "id": "cyber4",
           "x": -0.5,
-          "y": 0.5,
+          "y": 0.6,
         },
         {
           "id": "cyber5",
-          "x": 0,
-          "y": 0.8,
+          "x": 0.3,
+          "y": 0.7,
         },
       ]
     },
@@ -342,24 +342,14 @@ const data = {
       boxes: [
         {
           "id": "transport1",
-          "x": -0.45,
-          "y": -0.27,
-        },
-        {
-          "id": "transport2",
-          "x": 0,
+          "x": -0.5,
           "y": 0.2,
         },
         {
-          "id": "transport3",
-          "x": 0.45,
-          "y": -0.27,
+          "id": "transport2",
+          "x": 0.67,
+          "y": 0.1,
         },
-        {
-          "id": "transport4",
-          "x": 0.45,
-          "y": 0.27,
-        }
       ]
     },
     {
@@ -367,10 +357,15 @@ const data = {
       title: "Gig Work",
       title_low: true,
       color: "#fac712",
-      x: -0.17,
+      x: -0.15,
       y: 0.13,
-      radius: 0.11,
+      radius: 0.13,
       boxes: [
+        {
+          "id": "gig1",
+          "x": 0.5,
+          "y": 0.65,
+        }
       ]
     },
     {
@@ -378,10 +373,15 @@ const data = {
       title: "Labour & Social Welfare",
       title_low: true,
       color: "#fac712",
-      x: -0.17,
-      y: 0.165,
+      x: -0.15,
+      y: 0.156,
       radius: 0.18,
       boxes: [
+        {
+          "id": "labour1",
+          "x": -0.5,
+          "y": 0.75,
+        }
       ]
     },
     {
@@ -395,17 +395,17 @@ const data = {
         {
           "id": "ecommerce1",
           "x": 0.45,
-          "y": -0.27,
+          "y": 0.2,
         },
         {
           "id": "ecommerce2",
           "x": -0.45,
-          "y": -0.27,
+          "y": 0.25,
         },
         {
           "id": "ecommerce3",
           "x": 0,
-          "y": 0.2,
+          "y": 0.8,
         }
       ]
     },
@@ -679,7 +679,7 @@ const data = {
         "initial_year_of_publication": "2020"
       },
       {
-        "id": "transport3",
+        "id": "gig1",
         "title": "Code on Social Security, 2020",
         "link": "https://labour.gov.in/sites/default/files/ss_code_as_introduced_in_lok_sabha.pdf",
         "type": "Legislation",
@@ -687,7 +687,7 @@ const data = {
         "initial_year_of_publication": "2020"
       },
       {
-        "id": "transport4",
+        "id": "labour1",
         "title": "e-SHRAM",
         "link": "https://eshram.gov.in/",
         "type": "Infrastructure",

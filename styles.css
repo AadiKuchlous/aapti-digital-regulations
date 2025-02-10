@@ -1,14 +1,18 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'IBM Plex Sans';
   overflow: hidden;
 }
 
 #diagram {
   width: 100vw;
   height: 100vh;
-  background-color: #f0f0f0;
+  background-image: url('bg.png');
+}
+
+h1, h2, h3, h4, h5, h6, .circle-title {
+  font-family: 'DM Sans';
 }
 
 .circle {
@@ -41,6 +45,11 @@ body {
   height: fit-content;
   border-radius: 0.7em;
   font-size: 1.5em;
+}
+
+.box-types-container {
+  display: flex;
+  flex-direction: row;
 }
 
 .box-type {
@@ -87,6 +96,10 @@ body {
   background-color: rgba(169,63,188,255);
 }
 
+.box-type-circular {
+  background-color: rgba(105,220,224,255);
+}
+
 .side-modal {
   position: fixed;
   right: -400px;
@@ -130,4 +143,8 @@ body {
 
 #modal-title {
   margin-top: 0;
+}
+
+#modal-link {
+  word-wrap: break-word;
 }
