@@ -31,6 +31,7 @@ const global_circle = global_group.append("circle")
 // Add zoom functionality
 const zoom = d3.zoom()
     .scaleExtent([0.05, 5])
+    .interpolate(d3.interpolate)
     .on("zoom", (event) => {
       console.log(event.transform);
       d3.select('svg g')
@@ -76,30 +77,16 @@ circles.append("text")
 // Handle double-click for zoom-to-fit functionality
 svg.selectAll("circle").on("dblclick", (event, d) => {
   // Calculate the scale and translation to fit the element
-  const scale = Math.min(
+  const newScale = Math.min(
     width / (2 * d.r),
     height / (2 * d.r)
   )/10 * 0.9;
+  
+  let translateXnew = newScale*(-d.cx) + (defaultZoom*width/2);
+  let translateYnew = newScale*(-d.cy) + (defaultZoom*height/2);
 
-  var currentState = d3.zoomTransform(svg.node());
-  var currentZoom = currentState.k;
-  var currentX = currentState.x;
-  var currentY = currentState.y;
-
-  console.log(currentZoom, currentX, currentY);
-
-  const translateX = currentZoom*(-d.cx) + (defaultZoom*width/2);
-  const translateY = currentZoom*(-d.cy) + (defaultZoom*height/2);
-
-  // console.log(d.cx, d.cy);
-  // console.log(d.color);
-  // console.log("radius: ", d.r);
-  // console.log(width/2, height/2);
-
-  // svg.call(zoom.transform, d3.zoomIdentity.translate(width / 2, height / 2).scale(1));
-
-  svg.call(zoom.transform, d3.zoomIdentity.translate(translateX, translateY).scale(currentZoom));
-  // svg.transition().call(zoom.translateTo, width/2, height/2);
+  svg.transition().duration(750).call(zoom.transform, d3.zoomIdentity.translate(translateXnew, translateYnew).scale(newScale));
+  
 });
 
 
