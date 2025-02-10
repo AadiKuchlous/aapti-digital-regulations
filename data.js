@@ -353,22 +353,6 @@ const data = {
       ]
     },
     {
-      id: "gig_work",
-      title: "Gig Work",
-      title_low: true,
-      color: "#fac712",
-      x: -0.15,
-      y: 0.13,
-      radius: 0.13,
-      boxes: [
-        {
-          "id": "gig1",
-          "x": 0.5,
-          "y": 0.65,
-        }
-      ]
-    },
-    {
       id: "labour",
       title: "Labour & Social Welfare",
       title_low: true,
@@ -381,6 +365,22 @@ const data = {
           "id": "labour1",
           "x": -0.5,
           "y": 0.75,
+        }
+      ]
+    },
+    {
+      id: "gig_work",
+      title: "Gig Work",
+      title_low: true,
+      color: "#fac712",
+      x: -0.15,
+      y: 0.13,
+      radius: 0.13,
+      boxes: [
+        {
+          "id": "gig1",
+          "x": 0.5,
+          "y": 0.65,
         }
       ]
     },
