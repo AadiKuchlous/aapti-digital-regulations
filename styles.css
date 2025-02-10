@@ -81,7 +81,7 @@ h1, h2, h3, h4, h5, h6, .circle-title {
 }
 
 .box-type-guideline {
-  background-color: rgba(30,172,144,255); /* TODO: Change to different red color */
+  background-color: rgba(255,0,0,255);
 }
 
 .box-type-infrastructure {
