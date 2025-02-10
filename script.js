@@ -178,3 +178,18 @@ window.addEventListener("resize", function() {
     svg.attr("width", window.innerWidth)
        .attr("height", window.innerHeight);
 });
+
+// Adjust height of each box to fit the content
+d3.selectAll("foreignObject").each(function() {
+  const foreignObject = d3.select(this); // Select the current foreignObject
+  const div = foreignObject.select("div"); // Select the inner div
+
+  setTimeout(() => {
+    const computedStyle = window.getComputedStyle(div.node());
+    const paddingTop = parseFloat(computedStyle.paddingTop);
+    const paddingBottom = parseFloat(computedStyle.paddingBottom);
+    
+    const contentHeight = div.node().scrollHeight + paddingTop + paddingBottom;
+    foreignObject.attr("height", contentHeight);
+  }, 0);
+});
