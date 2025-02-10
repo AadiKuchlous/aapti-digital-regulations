@@ -9,6 +9,8 @@ const RECT_HEIGHT = RECT_WIDTH * 2;
 const GLOBAL_CIRCLE_RADIUS = min(width, height) / 2;
 const GLOBAL_CIRCLE_COORDS = {x: width / 2, y: height / 2};
 
+const defaultZoom = 0.1;
+
 const svg = d3.select("#diagram")
     .append("svg")
     .attr("id", "svg")
@@ -31,12 +33,13 @@ const zoom = d3.zoom()
     .scaleExtent([0.05, 5])
     .on("zoom", (event) => {
       console.log(event.transform);
-      global_group.attr("transform", event.transform);
+      d3.select('svg g')
+		    .attr('transform', event.transform);
     });
 
 svg.call(zoom);
 svg.on("dblclick.zoom", null); // Disable double-click zoom globally
-svg.call(zoom.transform, d3.zoomIdentity.scale(0.1));
+svg.call(zoom.transform, d3.zoomIdentity.scale(defaultZoom));
 
 // Create a group for each circle with the data
 const circles = global_group.selectAll("g")
@@ -78,25 +81,25 @@ svg.selectAll("circle").on("dblclick", (event, d) => {
     height / (2 * d.r)
   )/10 * 0.9;
 
-  console.log(scale);
+  var currentState = d3.zoomTransform(svg.node());
+  var currentZoom = currentState.k;
+  var currentX = currentState.x;
+  var currentY = currentState.y;
 
-  const translateX = (width / 2) - (d.cx * scale);
-  const translateY = (height / 2) - (d.cy * scale);
+  console.log(currentZoom, currentX, currentY);
 
-  console.log(d.cx, d.cy);
-  console.log(translateX, translateY);
+  const translateX = currentZoom*(-d.cx) + (defaultZoom*width/2);
+  const translateY = currentZoom*(-d.cy) + (defaultZoom*height/2);
 
-  // Smoothly transition to the new zoom
-  svg
-  // .transition()
-    // .duration(750)
-    .call(
-      zoom.transform,
-      d3.zoomIdentity
-      // .translate(translateX, translateY)
-      .translate(0, 0)
-      .scale(scale)
-    );
+  // console.log(d.cx, d.cy);
+  // console.log(d.color);
+  // console.log("radius: ", d.r);
+  // console.log(width/2, height/2);
+
+  // svg.call(zoom.transform, d3.zoomIdentity.translate(width / 2, height / 2).scale(1));
+
+  svg.call(zoom.transform, d3.zoomIdentity.translate(translateX, translateY).scale(currentZoom));
+  // svg.transition().call(zoom.translateTo, width/2, height/2);
 });
 
 
