@@ -10,14 +10,14 @@ const data = {
     medicine: '/icons/medicine.svg',
     data: '/icons/data.svg',
     geospatial: '/icons/geospatial.svg',
-    education: '/icons/education.svg',
+    education: '/icons/edu.svg',
     ai: '/icons/ai.svg',
-    broadcasting_telecom: '/icons/broadcast.svg',
+    broadcast: '/icons/broadcast.svg',
     finance: '/icons/finance.svg',
-    aviation: '/icons/aviation.svg',
-    cybersecurity: '/icons/cybersecurity.svg',
+    transport: '/icons/aviation.svg',
+    cyber: '/icons/cybersecurity.svg',
     labour: '/icons/labour.svg',
-    gig_work: '/icons/gigwork.svg',
+    gig: '/icons/gigwork.svg',
     ecommerce: '/icons/ecommerce.svg',
   },
   circles: [
@@ -104,32 +104,32 @@ const data = {
           radius: 0.22,
           boxes: [
             {
-              "id": "health1",
+              "id": "medicine1",
               "x": -0.45,
               "y": -0.23,
             },
             {
-              "id": "health2",
+              "id": "medicine2",
               "x": -0.75,
               "y": 0.4,
             },
             {
-              "id": "health3",
+              "id": "medicine3",
               "x": -0.65,
               "y": 0.6,
             },
             {
-              "id": "health4",
+              "id": "medicine4",
               "x": -0.45,
               "y": 0.9,
             },
             {
-              "id": "health5",
+              "id": "medicine5",
               "x": -0.1,
               "y": 0.2,
             },
             {
-              "id": "health6",
+              "id": "medicine6",
               "x": 0.7,
               "y": 0,
             }
@@ -250,8 +250,8 @@ const data = {
       ]
     },
     {
-      id: "broadcasting_telecom",
-      link: "/broadcasting_telecom.html",
+      id: "broadcast",
+      link: "/broadcast.html",
       title: "Boradcasting & Telecommunication",
       color: "#db6bee",
       x: 0.22,
@@ -322,7 +322,7 @@ const data = {
       ]
     },
     {
-      id: "cybersecurity",
+      id: "cyber",
       link: "/cybersecurity.html",
       title: "Cybersecurity",
       color: "#f14725",
@@ -396,7 +396,7 @@ const data = {
       ]
     },
     {
-      id: "gig_work",
+      id: "gig",
       link: "/gig_work.html",
       title: "Gig Work",
       title_low: true,
@@ -556,7 +556,7 @@ const data = {
         "initial_year_of_publication": "2012",
       },
       {
-        "id": "health1",
+        "id": "medicine1",
         "title": "Ayushman Bharat Digital Mission",
         "link": "https://abdm.gov.in/",
         "type": "Policy",
@@ -564,7 +564,7 @@ const data = {
         "initial_year_of_publication": "2021"
       },
       {
-        "id": "health2",
+        "id": "medicine2",
         "title": "Electronic Health Record Standards for India, 2016",
         "link": "https://esanjeevani.mohfw.gov.in/assets/guidelines/ehr_guidlines.pdf",
         "type": "Standards",
@@ -572,7 +572,7 @@ const data = {
         "initial_year_of_publication": "2016"
       },
       {
-        "id": "health3",
+        "id": "medicine3",
         "title": "Electronic Health Records (EHR) Standards for India (2016)",
         "link": "https://esanjeevani.mohfw.gov.in/assets/guidelines/ehr_guidlines.pdf",
         "type": "Circular",
@@ -580,7 +580,7 @@ const data = {
         "initial_year_of_publication": "2016"
       },
       {
-        "id": "health4",
+        "id": "medicine4",
         "title": "Digital Information Security in Healthcare Act (DISHA Act), 2017",
         "link": "https://www.estartindia.com/knowledge-hub/blog/digital-information-security-in-healthcare-act",
         "type": "Legislation",
@@ -588,7 +588,7 @@ const data = {
         "initial_year_of_publication": "2017"
       },
       {
-        "id": "health5",
+        "id": "medicine5",
         "title": "Telemedicine Practice Guidelines, 2020",
         "link": "https://esanjeevani.mohfw.gov.in/assets/guidelines/Telemedicine_Practice_Guidelines.pdf",
         "type": "Guideline",
@@ -596,7 +596,7 @@ const data = {
         "initial_year_of_publication": "2020"
       },
       {
-        "id": "health6",
+        "id": "medicine6",
         "title": "National e-Governance Plan (NeGP), 2006",
         "link": "https://www.meity.gov.in/divisions/national-e-governance-plan",
         "type": "Policy",
