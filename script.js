@@ -143,8 +143,8 @@ let allBoxes = Array.from(document.getElementsByClassName("box")).forEach(
 function showSideModal(data) {
     const sideModal = document.getElementById("side-modal-container");
 
-    sideModal["document-id"] = data.id;
-    sideModal.attr("open", "true");
+    sideModal.setAttribute("document-id", data.id);
+    sideModal.setAttribute("open", "true");
 
     closeBtn.onclick = function() {
         sideModal.classList.remove("open");
@@ -152,20 +152,20 @@ function showSideModal(data) {
 }
 
 // Close the side modal when clicking outside of it
-document.addEventListener("click", function(event) {
-    const sideModal = document.getElementById("side-modal");
-    const isClickInsideModal = sideModal.contains(event.target);
-    const isClickOnBox = event.target.closest(".box");
+// document.addEventListener("click", function(event) {
+//     const sideModal = document.getElementById("side-modal");
+//     const isClickInsideModal = sideModal.contains(event.target);
+//     const isClickOnBox = event.target.closest(".box");
 
-    if (!isClickInsideModal && !isClickOnBox && sideModal.classList.contains("open")) {
-        sideModal.classList.remove("open");
-    }
-});
+//     if (!isClickInsideModal && !isClickOnBox && sideModal.classList.contains("open")) {
+//         sideModal.classList.remove("open");
+//     }
+// });
 
 // Prevent closing when clicking inside the modal
-document.querySelector(".side-modal-content").addEventListener("click", function(event) {
-    event.stopPropagation();
-});
+// document.querySelector(".side-modal-content").addEventListener("click", function(event) {
+//     event.stopPropagation();
+// });
 
 // Handle window resize
 window.addEventListener("resize", function() {

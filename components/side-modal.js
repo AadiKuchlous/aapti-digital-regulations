@@ -1,5 +1,9 @@
 import { data } from '../data.js';
 class SideModal extends HTMLElement {
+  static get observedAttributes() {
+    return ['open', 'document-id'];
+  }
+
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
@@ -16,6 +20,7 @@ class SideModal extends HTMLElement {
           box-shadow: -2px 0 5px rgba(0,0,0,0.5);
           transition: transform 0.3s ease;
           transform: translateX(100%);
+          z-index: 1001;
         }
         :host([open]) {
           display: block;
@@ -48,15 +53,28 @@ class SideModal extends HTMLElement {
     `;
   }
 
+  attributeChangedCallback(name, oldValue, newValue) {
+    if (name === 'document-id') {
+      const document_id = this.getAttribute('document-id');
+      const document = data.documents.find(d => d.id === document_id);
+      this.shadowRoot.querySelector('#modal-title').textContent = document.title;
+      this.shadowRoot.querySelector('#modal-link').href = document.link;
+      this.shadowRoot.querySelector('#modal-content').textContent = document.description;
+      this.shadowRoot.querySelector('#modal-date').textContent = document.initial_year_of_publication;
+    }
+
+    if (name === 'open') {
+      const modal_is_open = this.getAttribute('open');
+      if (modal_is_open === 'true') {
+        this.shadowRoot.querySelector('#side-modal').classList.add('open');
+      } else {
+        this.shadowRoot.querySelector('#side-modal').classList.remove('open');
+      }
+    }
+  }
+
   connectedCallback() {
     this.shadowRoot.querySelector('.close').addEventListener('click', () => this.removeAttribute('open'));
-
-    const document_id = this.getAttribute('document-id');
-    const document = data.documents.find(d => d.id === document_id);
-    this.shadowRoot.querySelector('#modal-title').textContent = document.title;
-    this.shadowRoot.querySelector('#modal-link').href = document.link;
-    this.shadowRoot.querySelector('#modal-content').textContent = document.description;
-    this.shadowRoot.querySelector('#modal-date').textContent = document.initial_year_of_publication;
 
     const modal_is_open = this.getAttribute('open');
     if (modal_is_open === 'true') {
