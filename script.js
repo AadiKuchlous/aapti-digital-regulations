@@ -75,7 +75,7 @@ circles.append("text")
     .text(d => d.title);
 
 // Handle double-click for zoom-to-fit functionality
-svg.selectAll("circle").on("dblclick", (event, d) => {
+svg.selectAll("circle").on("click", (event, d) => {
   // Calculate the scale and translation to fit the element
   const newScale = Math.min(
     width / (2 * d.r),
