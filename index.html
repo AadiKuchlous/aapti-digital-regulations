@@ -9,36 +9,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+    <script src="/components/navbar.js" type="module" defer></script>
+    <script src="/components/side-modal.js" type="module" defer></script>
 </head>
 <body>
-  <nav style="background-color: #333; overflow: hidden; position: fixed; top: 0; width: 100%; z-index: 1000;">
-    <ul style="list-style-type: none; margin: 0; padding: 0; display: flex;">
-      <li style="float: left;">
-        <a href="/index.html" style="display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none;">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="20px" height="20px">
-          <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
-        </svg>
-        </a>
-      </li>
-      <li style="float: left;">
-        <a href="#" style="display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none;">
-          Aapti - Digital Regulations
-        </a>
-      </li>
-    </ul>
-  </nav>
+    <custom-navbar></custom-navbar>
+    
     <div id="diagram"></div>
-    <div id="side-modal" class="side-modal">
-        <div class="side-modal-content">
-            <button id="close-modal" class="close" aria-label="Close modal">&times;</button>
-            <h2 id="modal-title"></h2>
-            <h3>
-              <a id="modal-link" href="" target="_blank">Read More</a>
-            </h3>
-            <p id="modal-content"></p>
-            <span>Inital Date of Publication: </span><span id="modal-date">2006</span>
-        </div>
-    </div>
+    
+    <side-modal id="side-modal-container"></side-modal>
+    
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <!-- <script src="data.js"></script> -->
     <script type="module" src="script.js"></script>

@@ -4,10 +4,26 @@
 // Ex. x: 0.5, y: 0.5, radius: 0.25 would place the circle in the bottom right of the parent container with a radius of 25% of the parent container
 
 const data = {
-
+  icons: {
+    it: '/icons/it.svg',
+    agriculture: '/icons/agri.svg',
+    medicine: '/icons/medicine.svg',
+    data: '/icons/data.svg',
+    geospatial: '/icons/geospatial.svg',
+    education: '/icons/education.svg',
+    ai: '/icons/ai.svg',
+    broadcasting_telecom: '/icons/broadcast.svg',
+    finance: '/icons/finance.svg',
+    aviation: '/icons/aviation.svg',
+    cybersecurity: '/icons/cybersecurity.svg',
+    labour: '/icons/labour.svg',
+    gig_work: '/icons/gigwork.svg',
+    ecommerce: '/icons/ecommerce.svg',
+  },
   circles: [
       {
           id: "it",
+          link: "/it.html",
           parent: "global",
           title: "IT Act & Associated Framework",
           color: "#1da8f0",
@@ -59,6 +75,7 @@ const data = {
       },
       {
           id: "agriculture",
+          link: "/agriculture.html",
           title: "Agriculture",
           color: "#0fa689",
           x: 0.2,
@@ -79,6 +96,7 @@ const data = {
       },
       {
           id: "medicine",
+          link: "/medicine.html",
           title: "Medicine",
           color: "#14cdd4",
           x: 0.07,
@@ -119,6 +137,7 @@ const data = {
       },
       {
         id: "data",
+        link: "/data.html",
         title: "Data",
         color: "#cee741",
         x: -0.08,
@@ -154,6 +173,7 @@ const data = {
     },
     {
       id: "geospatial",
+      link: "/geospatial.html",
       title: "Geospatial Data",
       color: "#cee741",
       x: -0.1,
@@ -164,6 +184,7 @@ const data = {
     },
     {
       id: "education",
+      link: "/education.html",
       title: "Education",
       color: "#414bb2",
       x: 0.22,
@@ -209,6 +230,7 @@ const data = {
     },
     {
       id: "ai",
+      link: "/ai.html",
       title: "AI",
       color: "#652cb3",
       x: 0.35,
@@ -229,6 +251,7 @@ const data = {
     },
     {
       id: "broadcasting_telecom",
+      link: "/broadcasting_telecom.html",
       title: "Boradcasting & Telecommunication",
       color: "#db6bee",
       x: 0.22,
@@ -264,6 +287,7 @@ const data = {
     },
     {
       id: "finance",
+      link: "/finance.html",
       title: "Finance",
       color: "#f7b5b5",
       x: 0.05,
@@ -299,6 +323,7 @@ const data = {
     },
     {
       id: "cybersecurity",
+      link: "/cybersecurity.html",
       title: "Cybersecurity",
       color: "#f14725",
       x: 0.07,
@@ -334,6 +359,7 @@ const data = {
     },
     {
       id: "transport_aiviation",
+      link: "/transport_aviation.html",
       title: "Transport & Aviation",
       color: "#fef445",
       x: -0.2,
@@ -354,6 +380,7 @@ const data = {
     },
     {
       id: "labour",
+      link: "/labour.html",
       title: "Labour & Social Welfare",
       title_low: true,
       color: "#fac712",
@@ -370,6 +397,7 @@ const data = {
     },
     {
       id: "gig_work",
+      link: "/gig_work.html",
       title: "Gig Work",
       title_low: true,
       color: "#fac712",
@@ -386,6 +414,7 @@ const data = {
     },
     {
       id: "ecommerce",
+      link: "/ecommerce.html",
       title: "E-Commerce",
       color: "#ed5850",
       x: -0.11,

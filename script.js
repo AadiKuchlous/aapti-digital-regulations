@@ -67,15 +67,15 @@ circles.append("circle")
 
 // Add a title to each circle
 circles.append("text")
-    .attr("x", d => calculateCoordFromRelative(0, Number(d3.select(`#${d.id}`).attr("cx")), Number(d3.select(`#${d.id}`).attr("r"))))
-    .attr("y", d => calculateCoordFromRelative(d.title_low?0.7:-0.6, Number(d3.select(`#${d.id}`).attr("cy")), Number(d3.select(`#${d.id}`).attr("r"))))
-    .attr("text-anchor", "middle")
-    .attr("font-size", "4em")
-    .attr("class", "circle-title")
-    .text(d => d.title);
+  .attr("x", d => calculateCoordFromRelative(0, Number(d3.select(`#${d.id}`).attr("cx")), Number(d3.select(`#${d.id}`).attr("r"))))
+  .attr("y", d => calculateCoordFromRelative(d.title_low ? 0.7 : -0.6, Number(d3.select(`#${d.id}`).attr("cy")), Number(d3.select(`#${d.id}`).attr("r"))))
+  .attr("text-anchor", "middle")
+  .attr("font-size", "4em")
+  .attr("class", "circle-title")
+  .text(d => d.title);
 
 // Handle double-click for zoom-to-fit functionality
-svg.selectAll("circle").on("click", (event, d) => {
+svg.selectAll("circle").on("dblclick", (event, d) => {
   // Calculate the scale and translation to fit the element
   const newScale = Math.min(
     width / (2 * d.r),
@@ -87,6 +87,9 @@ svg.selectAll("circle").on("click", (event, d) => {
 
   svg.transition().duration(750).call(zoom.transform, d3.zoomIdentity.translate(translateXnew, translateYnew).scale(newScale));
   
+})
+.on("click", (event, d) => {
+  window.location.href = `category${d.link}`;
 });
 
 
@@ -138,19 +141,10 @@ let allBoxes = Array.from(document.getElementsByClassName("box")).forEach(
 
 
 function showSideModal(data) {
-    const sideModal = document.getElementById("side-modal");
-    const modalTitle = document.getElementById("modal-title");
-    const modalLink = document.getElementById("modal-link");
-    const modalDate = document.getElementById("modal-date");
-    const modalContent = document.getElementById("modal-content");
-    const closeBtn = document.getElementById("close-modal");
+    const sideModal = document.getElementById("side-modal-container");
 
-    modalTitle.textContent = data.title;
-    modalContent.textContent = data.description;
-    modalDate.textContent = data.initial_year_of_publication;
-    modalLink.href = data.link;
-    modalLink.textContent = data.link;
-    sideModal.classList.add("open");
+    sideModal["document-id"] = data.id;
+    sideModal.attr("open", "true");
 
     closeBtn.onclick = function() {
         sideModal.classList.remove("open");
