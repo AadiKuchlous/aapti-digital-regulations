@@ -23,7 +23,7 @@ class SideModal extends HTMLElement {
           z-index: 1001;
           padding: 1em;
         }
-        :host([open]) {
+        :host(.open) {
           display: block;
           transform: translateX(0);
         }
@@ -56,7 +56,6 @@ class SideModal extends HTMLElement {
           margin-bottom: 1em;
         }
         #modal-link {
-          flex: 1;
           background: none;
           border: none;
           color: #333;
@@ -69,10 +68,10 @@ class SideModal extends HTMLElement {
         #modal-title {
           margin-top: 0;
         }
-          .box-types-container {
-  display: flex;
-  flex-direction: row;
-}
+        .box-types-container {
+          display: flex;
+          flex-direction: row;
+        }
 
 .box-type {
   font-weight: normal;
@@ -172,27 +171,14 @@ class SideModal extends HTMLElement {
       });
     }
 
-    if (name === 'open') {
-      const modal_is_open = this.getAttribute('open');
-      if (modal_is_open === 'true') {
-        this.shadowRoot.querySelector('#side-modal').classList.add('open');
-      } else {
-        this.shadowRoot.querySelector('#side-modal').classList.remove('open');
-      }
-    }
   }
 
   connectedCallback() {
-    this.shadowRoot.querySelector('.close').addEventListener('click', () => this.removeAttribute('open'));
-
-    const modal_is_open = this.getAttribute('open');
-    if (modal_is_open === 'true') {
-      this.addAttribute('open');
-    }
+    this.shadowRoot.querySelector('#close-modal').addEventListener('click', () => document.querySelector("#side-modal-container").classList.remove('open'));
   }
 
   disconnectedCallback() {
-    this.shadowRoot.querySelector('.close').removeEventListener('click', () => this.removeAttribute('open'));
+    this.shadowRoot.querySelector('#close-modal').removeEventListener('click', () => {});
   }
 }
 
