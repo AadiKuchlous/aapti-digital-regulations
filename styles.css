@@ -36,15 +36,14 @@ h1, h2, h3, h4, h5, h6, .circle-title {
 .box text {
   font-size: 12px;
   text-anchor: middle;
-  dominant-baseline: middle;
 }
 
 .box-content {
-  padding: 1em;
+  padding: 12px;
   background-color: white;
   height: fit-content;
-  border-radius: 0.7em;
-  font-size: 25px;
+  border-radius: 12px;
+  font-size: 18px;
 }
 
 .box-types-container {
@@ -56,8 +55,9 @@ h1, h2, h3, h4, h5, h6, .circle-title {
   font-weight: normal;
   width: fit-content;
   color: white;
-  border-radius: 0.2em;
-  padding: 0.3em;
+  border-radius: 3px;
+  padding: 3px 6px;
+  margin-right: 6px;
 }
 
 .box-type-framework {
