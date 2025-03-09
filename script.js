@@ -105,23 +105,23 @@ const boxes = circles.selectAll("g")
     .append("g")
     .attr("class", "box")
     .attr("id", d => d.id)
-    .attr("transform", d => `translate(${d.myX}, ${d.myY})`)
-    .on("click", (event, d) => {
-        showSideModal(d);
-    });
+    .attr("transform", d => `translate(${d.myX}, ${d.myY})`);
 
 // Add a rectangle and text to each box
 boxes.append("foreignObject")
     .attr("x", -(RECT_WIDTH / 2))
     .attr("y", -(RECT_HEIGHT / 2))
     .attr("width", RECT_WIDTH)
-    .attr("height", RECT_HEIGHT) // TODO: Make this dynamic or add height data to the data.js
+    .attr("height", RECT_HEIGHT)
     .append("xhtml:div")
     .attr("class", "box-content")
     .text(d => d.title)
     .append(d => {
       let div = document.createElement("div");
       div.classList.add("box-types-container");
+      div.addEventListener("click", (event) => {
+        showSideModal(d);
+      });
       let types = d.type.split(", ");
       for (let i = 0; i < types.length; i++) {
         let span = document.createElement("div");
@@ -134,8 +134,7 @@ boxes.append("foreignObject")
 
 
 let mySVG = document.getElementById("global-group");
-let allBoxes = Array.from(document.getElementsByClassName("box")).forEach(
-  box => {
+let allBoxes = Array.from(document.getElementsByClassName("box")).forEach(box => {
     mySVG.insertBefore(box, null);
   });
 
