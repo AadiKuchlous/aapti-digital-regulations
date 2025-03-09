@@ -16,6 +16,7 @@ const svg = d3.select("#diagram")
     .attr("id", "svg")
     .attr("width", width)
     .attr("height", height)
+    .attr("viewBox", `0 0 ${width} ${height}`)
     .attr("xmlns", "http://www.w3.org/1999/xhtml");
 
 
@@ -26,7 +27,7 @@ const global_circle = global_group.append("circle")
   .attr("cx", GLOBAL_CIRCLE_COORDS.x)
   .attr("cy", GLOBAL_CIRCLE_COORDS.y)
   .attr("r", GLOBAL_CIRCLE_RADIUS)
-  .attr("fill", "rgba(0,0,0,0)");
+  .attr("fill", "rgba(0,0,0,255)");
 
 // Add zoom functionality
 const zoom = d3.zoom()
@@ -115,13 +116,13 @@ boxes.append("foreignObject")
     .attr("height", RECT_HEIGHT)
     .append("xhtml:div")
     .attr("class", "box-content")
+    .on("click", (event, d) => {
+      showSideModal(d);
+    })
     .text(d => d.title)
     .append(d => {
       let div = document.createElement("div");
       div.classList.add("box-types-container");
-      div.addEventListener("click", (event) => {
-        showSideModal(d);
-      });
       let types = d.type.split(", ");
       for (let i = 0; i < types.length; i++) {
         let span = document.createElement("div");
@@ -134,9 +135,13 @@ boxes.append("foreignObject")
 
 
 let mySVG = document.getElementById("global-group");
-let allBoxes = Array.from(document.getElementsByClassName("box")).forEach(box => {
+document.querySelectorAll(".box").forEach(box => {
     mySVG.insertBefore(box, null);
-  });
+});
+document.querySelectorAll(".box").forEach(box => {
+  let computedFontSize = GLOBAL_CIRCLE_RADIUS * 0.005;
+  box.style.fontSize = `${computedFontSize}px`;
+});
 
 
 function showSideModal(data) {
@@ -159,7 +164,7 @@ document.addEventListener("click", function(event) {
 });
 
 // Prevent closing when clicking inside the modal
-document.querySelector(".side-modal-container").addEventListener("click", function(event) {
+document.querySelector("#side-modal-container").addEventListener("click", function(event) {
     event.stopPropagation();
 });
 
