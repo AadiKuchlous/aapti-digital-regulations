@@ -120,6 +120,19 @@ class SideModal extends HTMLElement {
 .box-type-circular {
   background-color: rgba(105,220,224,255);
 }
+  #modal-document-categories {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 5em;
+  }
+  #modal-document-categories img {
+    height: 1em;
+    width: 1em;
+    margin-top: 0.3em;
+    margin-right: 0.2em;
+  }
       </style>
       <div id="side-modal" class="side-modal">
         <div class="side-modal-content">
@@ -149,6 +162,7 @@ class SideModal extends HTMLElement {
             </div>
             <p id="modal-content"></p>
             <span>Inital Date of Publication: </span><span id="modal-date">2006</span>
+            <div id="modal-document-categories"></div>
         </div>
     </div>
     `;
@@ -168,6 +182,14 @@ class SideModal extends HTMLElement {
         div.classList.add(`box-type-${element.toLowerCase()}`, "box-type");
         div.textContent = element;
         this.shadowRoot.querySelector('#modal-document-types').append(div);
+      });
+
+      let categories = doc_data.category.split(", ");
+      this.shadowRoot.querySelector('#modal-document-categories').innerHTML = '';
+      categories.forEach(element => {
+        let img = document.createElement("img");
+        img.src = data.icons[element];
+        this.shadowRoot.querySelector('#modal-document-categories').append(img);
       });
     }
 

@@ -458,6 +458,7 @@ const data = {
         "type": "Rules",
         "description": "Specifies the process by which the government can block public access to online information in the interest of national security, public order, and other specified reasons.",
         "initial_year_of_publication": "2009",
+        "category": "it"
       },
       {
         "id": "it2",
@@ -466,6 +467,7 @@ const data = {
         "type": "Legislation",
         "description": "An Act designed to regulate e-commerce transactions and cybercrime offenses. It includes provisions for using digital signatures to ensure the security and authenticity of electronic documents.",
         "initial_year_of_publication": "2000",
+        "category": "it"
       },
       {
         "id": "it3",
@@ -474,6 +476,7 @@ const data = {
         "type": "Rules",
         "description": "Guidelines for digital intermediaries and social media platforms to regulate content, privacy, and grievance redressal in compliance with Indian laws.",
         "initial_year_of_publication": "2021",
+        "category": "it"
       },
       {
         "id": "it4",
@@ -482,6 +485,7 @@ const data = {
         "type": "Rules",
         "description": "Defines the roles and responsibilities of the Indian Computer Emergency Response Team (CERT-In)",
         "initial_year_of_publication": "2013",
+        "category": "it"
       },
       {
         "id": "it5",
@@ -490,6 +494,7 @@ const data = {
         "type": "Rules",
         "description": "Requires intermediaries offering digital locker services to preserve user data, including records of access and usage, for a specified period to ensure data security, user privacy, and compliance with regulatory guidelines.",
         "initial_year_of_publication": "2016",
+        "category": "it"
       },
       {
         "id": "it6",
@@ -498,6 +503,7 @@ const data = {
         "type": "Rules",
         "description": "Governs presentation, procedure, and scrutiny of aplications to the CAT",
         "initial_year_of_publication": "2000",
+        "category": "it"
       },
       {
         "id": "it7",
@@ -506,6 +512,7 @@ const data = {
         "type": "Rules",
         "description": "Rules governing the certification of digital signatures and activities of certifying authorities under the IT Act, ensuring the authenticity and integrity of digital documents.",
         "initial_year_of_publication": "2000",
+        "category": "it"
       },
       {
         "id": "it8",
@@ -514,6 +521,7 @@ const data = {
         "type": "Rules",
         "description": "Rules governing how sensitive personal data or information (SPDI) should be handled by organizations with a focus on secure data storage and consent for data sharing.",
         "initial_year_of_publication": "2011",
+        "category": "it, data"
       },
       {
         "id": "data1",
@@ -522,6 +530,7 @@ const data = {
         "type": "Legislation",
         "description": "The DPDPA focuses on protecting personal data in the digital ecosystem, specifying rights of individuals, duties of data fiduciaries, and ensuring consent-based data use.",
         "initial_year_of_publication": "2023",
+        "category": "data"
       },
       {
         "id": "data2",
@@ -530,6 +539,7 @@ const data = {
         "type": "Framework",
         "description": "Improves data sharing in financial services, health, and telecom sectors by empowering individuals to manage and consent to their data usage through secure platforms.",
         "initial_year_of_publication": "2020",
+        "category": "data"
       },
       {
         "id": "data3",
@@ -538,6 +548,7 @@ const data = {
         "type": "Policy",
         "description": "Policy implemented by the Indian government to liberalize access to geospatial data, encouraging the development and use of spatial data across sectors",
         "initial_year_of_publication": "2022",
+        "category": "data, geospatial"
       },
       {
         "id": "data4",
@@ -546,6 +557,7 @@ const data = {
         "type": "Guideline",
         "description": "Guidelines for the gathering, acquisition, and utilization of geospatial data and mapping activities.",
         "initial_year_of_publication": "2021",
+        "category": "data, geospatial"
       },
       {
         "id": "data5",
@@ -554,6 +566,7 @@ const data = {
         "type": "Policy",
         "description": "This policy promotes data sharing and accessibility within the government, enabling a framework for transparency and research use of data across sectors.",
         "initial_year_of_publication": "2012",
+        "category": "data"
       },
       {
         "id": "medicine1",
@@ -561,7 +574,8 @@ const data = {
         "link": "https://abdm.gov.in/",
         "type": "Policy",
         "description": "A health-focused initiative under Digital India, creating a national digital health ecosystem by ensuring the availability of digital health records.",
-        "initial_year_of_publication": "2021"
+        "initial_year_of_publication": "2021",
+        "category": "medicine"
       },
       {
         "id": "medicine2",
@@ -569,7 +583,8 @@ const data = {
         "link": "https://esanjeevani.mohfw.gov.in/assets/guidelines/ehr_guidlines.pdf",
         "type": "Standards",
         "description": "Lays down principles in relation to protection, privacy, disclosure and preservation of Protected Health Information ('PHI') and Electronic Protected Health Information ('ePHI').",
-        "initial_year_of_publication": "2016"
+        "initial_year_of_publication": "2016",
+        "category": "medicine, data"
       },
       {
         "id": "medicine3",
@@ -577,7 +592,8 @@ const data = {
         "link": "https://esanjeevani.mohfw.gov.in/assets/guidelines/ehr_guidlines.pdf",
         "type": "Circular",
         "description": "Circular by the Ministry of Health and Family Welfare aimed at creating a uniform, standards-based system for the collection, storage, and exchange of patient health data across healthcare facilities.",
-        "initial_year_of_publication": "2016"
+        "initial_year_of_publication": "2016",
+        "category": "medicine, data"
       },
       {
         "id": "medicine4",
@@ -585,7 +601,8 @@ const data = {
         "link": "https://www.estartindia.com/knowledge-hub/blog/digital-information-security-in-healthcare-act",
         "type": "Legislation",
         "description": "Act to ensure data privacy, confidentiality, reliability and security of digital health data.",
-        "initial_year_of_publication": "2017"
+        "initial_year_of_publication": "2017",
+        "category": "medicine, data",
       },
       {
         "id": "medicine5",
@@ -593,7 +610,8 @@ const data = {
         "link": "https://esanjeevani.mohfw.gov.in/assets/guidelines/Telemedicine_Practice_Guidelines.pdf",
         "type": "Guideline",
         "description": "Legal framework for telemedicine services in India, allowing doctors to consult and treat patients via digital platforms.",
-        "initial_year_of_publication": "2020"
+        "initial_year_of_publication": "2020",
+        "category": "medicine"
       },
       {
         "id": "medicine6",
@@ -601,7 +619,8 @@ const data = {
         "link": "https://www.meity.gov.in/divisions/national-e-governance-plan",
         "type": "Policy",
         "description": "Streamlines public service delivery via digital platforms, with a focus on health, education, and agriculture services.",
-        "initial_year_of_publication": "2006"
+        "initial_year_of_publication": "2006",
+        "category": "medicine, education, agriculture"
       },
       {
         "id": "agriculture1",
@@ -609,7 +628,8 @@ const data = {
         "link": "https://agriwelfare.gov.in/en/DigiAgriDiv",
         "type": "Policy",
         "description": "Aims to establish a comprehensive farmer-centric digital and space-tech ecosystem to enhance transparency and efficiency in the execution of government programs while providing crucial support for evidence-based policy making for farmers’ welfare.",
-        "initial_year_of_publication": "2024"
+        "initial_year_of_publication": "2024",
+        "category": "agriculture"
       },
       {
         "id": "agriculture2",
@@ -617,7 +637,8 @@ const data = {
         "link": "https://agriwelfare.gov.in/sites/default/files/FINAL_Guidelines_DAM_23_9_24.pdf",
         "type": "Guideline",
         "description": "Operational guidelines outlining the Digital Agriculture Mission, AgriStack, Krishi Digital Support System, National Soil Mapping Program, Digital General Crop Estimation Survey, IT initiative support and other details regarding implementation of AgriTech.",
-        "initial_year_of_publication": "2024"
+        "initial_year_of_publication": "2024",
+        "category": "agriculture"
       },
       {
         "id": "ai1",
@@ -625,7 +646,8 @@ const data = {
         "link": "https://ai-for-all.in/",
         "type": "Policy",
         "description": "AI For All is a self-learning online program designed to raise public awareness about Artificial Intelligence.",
-        "initial_year_of_publication": "2021"
+        "initial_year_of_publication": "2021",
+        "category": "ai, education"
       },
       {
         "id": "ai2",
@@ -633,7 +655,8 @@ const data = {
         "link": "https://indiaai.gov.in/",
         "type": "Policy",
         "description": "The IndiaAI Mission aims to build a robust AI ecosystem by enhancing computing capabilities, improving data quality, fostering innovation, and supporting ethical AI practices. 7 Pillars: IndiaAI Compute Capacity, IndiaAI Innovation Centre, IndiaAI Datasets Platform, IndiaAI Application Development Initiative, IndiaAI FutureSkills, IndiaAI Startup Financing, Safe & Trusted AI.",
-        "initial_year_of_publication": "2024"
+        "initial_year_of_publication": "2024",
+        "category": "ai"
       },
       {
         "id": "education1",
@@ -641,7 +664,8 @@ const data = {
         "link": "https://pmevidya.education.gov.in/",
         "type": "Policy",
         "description": "An initiative under the Atma Nirbhar Bharat program that integrates all efforts related to digital education. It includes DIKSHA, one nation-one digital platform, radio podcasts, and TV channels for classes 1 to 12 to ensure access to quality digital education across India.",
-        "initial_year_of_publication": "2020"
+        "initial_year_of_publication": "2020",
+        "category": "education"
       },
       {
         "id": "education2",
@@ -649,7 +673,8 @@ const data = {
         "link": "https://www.education.gov.in/sites/upload_files/mhrd/files/NEP_Final_English_0.pdf",
         "type": "Policy",
         "description": "The NEP 2020 emphasizes the integration of technology in education through the establishment of a National Educational Technology Forum (NETF). It promotes digital infrastructure, online teaching, digital content creation, and the use of technology for better governance and data management in educational institutions.",
-        "initial_year_of_publication": "2020"
+        "initial_year_of_publication": "2020",
+        "category": "education"
       },
       {
         "id": "education3",
@@ -657,7 +682,8 @@ const data = {
         "link": "http://diksha.gov.in/",
         "type": "Infrastructure",
         "description": "A national platform launched by the Ministry of Education for teachers and students to access e-learning resources. It provides digital content, teacher training, and assessment tools, promoting the use of technology in classrooms.",
-        "initial_year_of_publication": "2017"
+        "initial_year_of_publication": "2017",
+        "category": "education"
       },
       {
         "id": "education4",
@@ -665,7 +691,8 @@ const data = {
         "link": "https://www.pmgdisha.in/",
         "type": "Policy",
         "description": "Digital literacy initiative aiming to make six crore people in rural India digitally literate by teaching them how to use digital services.",
-        "initial_year_of_publication": "2017"
+        "initial_year_of_publication": "2017",
+        "category": "education"
       },
       {
         "id": "education5",
@@ -673,7 +700,8 @@ const data = {
         "link": "https://swayam.gov.in/",
         "type": "Policy, Infrastructure",
         "description": "Government platforms for Massive Open Online Courses (MOOCs) to provide affordable, quality education to all, including underserved populations.",
-        "initial_year_of_publication": "2024"
+        "initial_year_of_publication": "2024",
+        "category": "education"
       },
       {
         "id": "education6",
@@ -681,7 +709,8 @@ const data = {
         "link": "https://epathshala.nic.in/",
         "type": "Policy, Infrastructure",
         "description": "A joint initiative by NCERT and Ministry of Education providing e-books, audio-visual resources, and educational materials in multiple languages to students, teachers, and parents, aiming to enhance digital learning.",
-        "initial_year_of_publication": "2015"
+        "initial_year_of_publication": "2015",
+        "category": "education"
       },
       {
         "id": "education7",
@@ -689,7 +718,8 @@ const data = {
         "link": "https://swayamprabha.gov.in/",
         "type": "Infrastructure",
         "description": "SWAYAM PRABHA runs DTH channels to broadcast educational content.",
-        "initial_year_of_publication": "2017"
+        "initial_year_of_publication": "2017",
+        "category": "education, broadcast"
       },
       {
         "id": "transport1",
@@ -697,7 +727,8 @@ const data = {
         "link": "https://digitalsky.dgca.gov.in/",
         "type": "Policy",
         "description": "A policy framework regulating the use of drones in India, emphasizing registration, permissions, and safety protocols for unmanned aerial systems (UAS).",
-        "initial_year_of_publication": "2018"
+        "initial_year_of_publication": "2018",
+        "category": "transport"
       },
       {
         "id": "transport2",
@@ -705,7 +736,8 @@ const data = {
         "link": "https://morth.nic.in/sites/default/files/notifications_document/Motor%20Vehicle%20Aggregators27112020150046.pdf",
         "type": "Guideline",
         "description": "Regulates transport aggregators, regulation of fares, compliances by vehicles, apps and websites, ride-sharing, safety measures and ride cancellations including data sharing.",
-        "initial_year_of_publication": "2020"
+        "initial_year_of_publication": "2020",
+        "category": "transport, gig, labour"
       },
       {
         "id": "gig1",
@@ -713,7 +745,8 @@ const data = {
         "link": "https://labour.gov.in/sites/default/files/ss_code_as_introduced_in_lok_sabha.pdf",
         "type": "Legislation",
         "description": "Creates a third category (outside of employees and contract workers) to encompass gig work and platform-based work and extends social benefits to these gig workers.",
-        "initial_year_of_publication": "2020"
+        "initial_year_of_publication": "2020",
+        "category": "gig, labour"
       },
       {
         "id": "labour1",
@@ -721,7 +754,8 @@ const data = {
         "link": "https://eshram.gov.in/",
         "type": "Infrastructure",
         "description": "A platform for the registration of unorganized workers, helping them access government benefits and welfare schemes through a single digital platform.",
-        "initial_year_of_publication": "2021"
+        "initial_year_of_publication": "2021",
+        "category": "labour"
       },
       {
         "id": "ecommerce1",
@@ -729,7 +763,8 @@ const data = {
         "link": "https://www.meity.gov.in/writereaddata/files/Electronics%20&%20Information%20Technology%20Goods%20%28Requirements%20for%20Compulsory%20Registration%29%20Order,%202012.pdf",
         "type": "Order",
         "description": "Mandates that certain electronic and IT products must be tested and certified for safety standards by recognized labs before being sold.",
-        "initial_year_of_publication": "2012"
+        "initial_year_of_publication": "2012",
+        "category": "ecommerce"
       },
       {
         "id": "ecommerce2",
@@ -737,7 +772,8 @@ const data = {
         "link": "https://consumeraffairs.nic.in/theconsumerprotection/consumer-protection-e-commerce-rules-2020",
         "type": "Rules",
         "description": "Guidelines to ensure transparency, fairness, and consumer protection for all e-commerce platforms operating in India, requiring entities to provide clear information, handle grievances effectively, and avoid unfair trade practices.",
-        "initial_year_of_publication": "2020"
+        "initial_year_of_publication": "2020",
+        "category": "ecommerce"
       },
       {
         "id": "ecommerce3",
@@ -745,7 +781,8 @@ const data = {
         "link": "https://fssai.gov.in/upload/advisories/2018/02/5a968f14cc994189.pdf",
         "type": "Guideline",
         "description": "Regulate the conduct of online food service providers and e-commerce platforms dealing with food.",
-        "initial_year_of_publication": "2017"
+        "initial_year_of_publication": "2017",
+        "category": "ecommerce"
       },
       {
         "id": "finance1",
@@ -753,7 +790,8 @@ const data = {
         "link": "https://www.rbi.org.in/commonperson/English/Scripts/FAQs.aspx?Id=420",
         "type": "Legislation",
         "description": "Mandates all information received by the RBI from payment system and system provider to be confidential, subject to certain safeguarding interests, such as protection of: the integrity, effectiveness and security of the payment system; the interest of banking or monetary policy; the operation of the payment systems generally, or in the public interest.",
-        "initial_year_of_publication": "2007"
+        "initial_year_of_publication": "2007",
+        "category": "finance, data"
       },
       {
         "id": "finance2",
@@ -761,7 +799,8 @@ const data = {
         "link": "https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=12486",
         "type": "Direction",
         "description": "Guidelines on Outsourcing of IT Services by Regulated Entities.",
-        "initial_year_of_publication": "2023"
+        "initial_year_of_publication": "2023",
+        "category": "finance"
       },
       {
         "id": "finance3",
@@ -769,7 +808,8 @@ const data = {
         "link": "https://www.rbi.org.in/Scripts/bs_viewcontent.aspx?Id=4425",
         "type": "Direction",
         "description": "Instructions to entities operating Electronic Trading Platforms.",
-        "initial_year_of_publication": "2024"
+        "initial_year_of_publication": "2024",
+        "category": "finance"
       },
       {
         "id": "finance4",
@@ -777,7 +817,8 @@ const data = {
         "link": "https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=12032",
         "type": "Direction",
         "description": "Comprehensive guidelines for banks and credit card issuing NBFCs to establish governance structures, implement common security standards across digital payment channels, and ensure customer data protection, fraud management, and secure transaction processing.",
-        "initial_year_of_publication": "2021"
+        "initial_year_of_publication": "2021",
+        "category": "finance"
       },
       {
         "id": "finance5",
@@ -785,7 +826,8 @@ const data = {
         "link": "https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=12562",
         "type": "Direction",
         "description": "Instructions relating to Information Technology Governance and Controls, Business Continuity Management and Information Systems Audit.",
-        "initial_year_of_publication": "2023"
+        "initial_year_of_publication": "2023",
+        "category": "finance"
       },
       {
         "id": "broadcast1",
@@ -793,7 +835,8 @@ const data = {
         "link": "https://www.meity.gov.in/writereaddata/files/GSR_19%28E%29_0.pdf",
         "type": "Rules",
         "description": "Guidelines for protecting India's critical information infrastructure (CII) by identifying, monitoring, and securing essential digital systems against cyber threats, focusing on sectors critical to national security, such as banking, power, and telecommunications.",
-        "initial_year_of_publication": "2013"
+        "initial_year_of_publication": "2013",
+        "category": "broadcast, cyber, finance"
       },
       {
         "id": "broadcast2",
@@ -801,7 +844,8 @@ const data = {
         "link": "https://www.indiacode.nic.in/bitstream/123456789/15345/1/the_cable_television_networks_%28regulation%29.pdf",
         "type": "Legislation",
         "description": "Regulates the operation of cable television networks in the country and for matters connected therewith or incidental thereto.",
-        "initial_year_of_publication": "1995"
+        "initial_year_of_publication": "1995",
+        "category": "broadcast"
       },
       {
         "id": "broadcast3",
@@ -809,7 +853,8 @@ const data = {
         "link": "https://egazette.gov.in/WriteReadData/2023/250880.pdf",
         "type": "Legislation",
         "description": "Updates the laws that govern the development, operation, and expansion of telecommunications networks and services. It also aims to regulate the assignment of spectrum.",
-        "initial_year_of_publication": "2023"
+        "initial_year_of_publication": "2023",
+        "category": "broadcast"
       },
       {
         "id": "broadcast4",
@@ -817,7 +862,8 @@ const data = {
         "link": "https://trai.gov.in/release-publication/regulation",
         "type": "Guideline",
         "description": "Various regulations and orders governing the telecom sector.",
-        "initial_year_of_publication": "Multiple"
+        "initial_year_of_publication": "Multiple",
+        "category": "broadcast"
       },
       {
         "id": "broadcast5",
@@ -825,7 +871,8 @@ const data = {
         "link": "https://www.indiacode.nic.in/handle/123456789/2170?locale=en ",
         "type": "Legislation",
         "description": "An Act to make provision for the certification of cinematograph films for exhibition and for regulating exhibitions by means of cinematographs.",
-        "initial_year_of_publication": "1952"
+        "initial_year_of_publication": "1952",
+        "category": "broadcast"
       },
       {
         "id": "cyber1",
@@ -833,7 +880,8 @@ const data = {
         "link": "https://www.rbi.org.in/commonperson/English/Scripts/Notification.aspx?Id=1721",
         "type": "Guideline",
         "description": "RBI Cyber Security Guidelines for Banks.",
-        "initial_year_of_publication": "2016"
+        "initial_year_of_publication": "2016",
+        "category": "cyber, finance"
       },
       {
         "id": "cyber2",
@@ -841,7 +889,8 @@ const data = {
         "link": "https://www.meity.gov.in/content/national-cyber-security-policy-2013-0",
         "type": "Policy",
         "description": "Aims to ensure a secure and resilient cyberspace for citizens, businesses, and the government by promoting stronger security practices and greater awareness of cyber threats.",
-        "initial_year_of_publication": "2013"
+        "initial_year_of_publication": "2013",
+        "category": "cyber"
       },
       {
         "id": "cyber3",
@@ -849,7 +898,8 @@ const data = {
         "link": "https://thc.nic.in/Central%20Governmental%20Rules/Companies%20%28Management%20and%20Administration%29%20Rules,2014.pdf",
         "type": "Rules",
         "description": "Mandate adequate cybersecurity in respect of an electronic voting system, which is used by members of a company to exercise their right to vote at general meetings.",
-        "initial_year_of_publication": "2014"
+        "initial_year_of_publication": "2014",
+        "category": "cyber"
       },
       {
         "id": "cyber4",
@@ -857,7 +907,8 @@ const data = {
         "link": "https://www.meity.gov.in/content/cyber-laws",
         "type": "Legislation",
         "description": "IPC Amendments for Cybercrimes. Section 463, 464 - Forgery-related offenses, including digital documents. Section 468, 469 - Forgery for cheating and reputation harm, extended to online fraud. Section 499, 500 - Defamation, including online slander. Section 354D - Cyberstalking. Section 379, 420 - Theft and cheating, covering online frauds and data theft. Section 509 - Insulting modesty of women via digital platforms.",
-        "initial_year_of_publication": "2024"
+        "initial_year_of_publication": "2024",
+        "category": "cyber"
       },
       {
         "id": "cyber5",
@@ -865,7 +916,8 @@ const data = {
         "link": "https://irdai.gov.in/document-detail?documentId=3314780",
         "type": "Policy",
         "description": "Cybersecurity measures for insurers, including annual vulnerability assessments, regular audits, and protocols to protect customer data from breaches, ensuring compliance with data security standards in the insurance sector.",
-        "initial_year_of_publication": "2023"
+        "initial_year_of_publication": "2023",
+        "category": "cyber"
       }
     ]
 };
