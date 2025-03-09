@@ -27,7 +27,7 @@ const global_circle = global_group.append("circle")
   .attr("cx", GLOBAL_CIRCLE_COORDS.x)
   .attr("cy", GLOBAL_CIRCLE_COORDS.y)
   .attr("r", GLOBAL_CIRCLE_RADIUS)
-  .attr("fill", "rgba(0,0,0,255)");
+  .attr("fill", "rgba(0,0,0,0)");
 
 // Add zoom functionality
 const zoom = d3.zoom()
