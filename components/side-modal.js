@@ -68,56 +68,57 @@ class SideModal extends HTMLElement {
         #modal-title {
           margin-top: 0;
         }
-        .box-types-container {
+        .doc-types-container {
           display: flex;
           flex-direction: row;
         }
 
-.box-type {
+.doc-type {
   font-weight: normal;
   width: fit-content;
   color: white;
   border-radius: 0.2em;
   padding: 0.3em;
+  margin-right: 0.5em;
 }
 
-.box-type-framework {
+.doc-type-framework {
   background-color: rgba(250,199,13,255);
 }
 
-.box-type-legislation {
+.doc-type-legislation {
   background-color: rgba(87,95,186,255);
 }
 
-.box-type-policy {
+.doc-type-policy {
   background-color: rgba(149,212,88,255);
 }
 
-.box-type-rules {
+.doc-type-rules {
   background-color: rgba(241,77,46,255);
 }
 
-.box-type-direction {
+.doc-type-direction {
   background-color: rgba(30,172,144,255);
 }
 
-.box-type-guideline {
+.doc-type-guideline {
   background-color: rgba(255,0,0,255);
 }
 
-.box-type-infrastructure {
+.doc-type-infrastructure {
   background-color: rgba(23,205,212,255);
 }
 
-.box-type-order {
+.doc-type-order {
   background-color: rgba(0,0,0,255);
 }
 
-.box-type-standards {
+.doc-type-standards {
   background-color: rgba(169,63,188,255);
 }
 
-.box-type-circular {
+.doc-type-circular {
   background-color: rgba(105,220,224,255);
 }
   #modal-document-categories {
@@ -139,7 +140,7 @@ class SideModal extends HTMLElement {
             <div id="close-modal-container">
             <button id="close-modal" aria-label="Close modal">&times;</button>
             </div>
-            <div class="box-types-container" id="modal-document-types">
+            <div class="doc-types-container" id="modal-document-types">
             </div>
             <div id="modal-header">
               <h2 id="modal-title"></h2>
@@ -179,7 +180,7 @@ class SideModal extends HTMLElement {
       this.shadowRoot.querySelector('#modal-document-types').innerHTML = '';
       doc_data.type.split(", ").forEach(element => {
         let div = document.createElement("div");
-        div.classList.add(`box-type-${element.toLowerCase()}`, "box-type");
+        div.classList.add(`doc-type-${element.toLowerCase()}`, "doc-type");
         div.textContent = element;
         this.shadowRoot.querySelector('#modal-document-types').append(div);
       });
