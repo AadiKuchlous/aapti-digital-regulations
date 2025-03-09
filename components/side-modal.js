@@ -188,9 +188,13 @@ class SideModal extends HTMLElement {
       let categories = doc_data.category.split(", ");
       this.shadowRoot.querySelector('#modal-document-categories').innerHTML = '';
       categories.forEach(element => {
+        let link = document.createElement("a");
         let img = document.createElement("img");
         img.src = data.icons[element];
-        this.shadowRoot.querySelector('#modal-document-categories').append(img);
+        link.href = `/category/${element}.html`;
+        link.target = "_blank";
+        link.appendChild(img);
+        this.shadowRoot.querySelector('#modal-document-categories').append(link);
       });
     }
 
