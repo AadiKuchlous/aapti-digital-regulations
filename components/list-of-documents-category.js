@@ -25,6 +25,7 @@ class ListOfDocumentsCategory extends HTMLElement {
 
       #category-icon {
         height: 4em;
+        filter: grayscale(1);
       }
 
       #category-title {

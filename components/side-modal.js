@@ -73,67 +73,67 @@ class SideModal extends HTMLElement {
           flex-direction: row;
         }
 
-.doc-type {
-  font-weight: normal;
-  width: fit-content;
-  color: white;
-  border-radius: 0.2em;
-  padding: 0.3em;
-  margin-right: 0.5em;
-}
+        .doc-type {
+          font-weight: normal;
+          width: fit-content;
+          color: white;
+          border-radius: 0.2em;
+          padding: 0.3em;
+          margin-right: 0.5em;
+        }
 
-.doc-type-framework {
-  background-color: rgba(250,199,13,255);
-}
+        .doc-type-framework {
+          background-color: rgba(250,199,13,255);
+        }
 
-.doc-type-legislation {
-  background-color: rgba(87,95,186,255);
-}
+        .doc-type-legislation {
+          background-color: rgba(87,95,186,255);
+        }
 
-.doc-type-policy {
-  background-color: rgba(149,212,88,255);
-}
+        .doc-type-policy {
+          background-color: rgba(149,212,88,255);
+        }
 
-.doc-type-rules {
-  background-color: rgba(241,77,46,255);
-}
+        .doc-type-rules {
+          background-color: rgba(241,77,46,255);
+        }
 
-.doc-type-direction {
-  background-color: rgba(30,172,144,255);
-}
+        .doc-type-direction {
+          background-color: rgba(30,172,144,255);
+        }
 
-.doc-type-guideline {
-  background-color: rgba(255,0,0,255);
-}
+        .doc-type-guideline {
+          background-color: rgba(255,0,0,255);
+        }
 
-.doc-type-infrastructure {
-  background-color: rgba(23,205,212,255);
-}
+        .doc-type-infrastructure {
+          background-color: rgba(23,205,212,255);
+        }
 
-.doc-type-order {
-  background-color: rgba(0,0,0,255);
-}
+        .doc-type-order {
+          background-color: rgba(0,0,0,255);
+        }
 
-.doc-type-standards {
-  background-color: rgba(169,63,188,255);
-}
+        .doc-type-standards {
+          background-color: rgba(169,63,188,255);
+        }
 
-.doc-type-circular {
-  background-color: rgba(105,220,224,255);
-}
-  #modal-document-categories {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    font-size: 5em;
-  }
-  #modal-document-categories img {
-    height: 1em;
-    width: 1em;
-    margin-top: 0.3em;
-    margin-right: 0.2em;
-  }
+        .doc-type-circular {
+          background-color: rgba(105,220,224,255);
+        }
+        #modal-document-categories {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: center;
+          font-size: 5em;
+        }
+        #modal-document-categories img {
+          height: 1em;
+          width: 1em;
+          margin-top: 0.3em;
+          margin-right: 0.2em;
+        }
       </style>
       <div id="side-modal" class="side-modal">
         <div class="side-modal-content">
