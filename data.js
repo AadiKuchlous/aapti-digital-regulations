@@ -3,22 +3,23 @@
 // Ex. x: 0, y: 0, radius: 0.25 would place the circle in the center of the parent container with a radius of 25% of the parent container
 // Ex. x: 0.5, y: 0.5, radius: 0.25 would place the circle in the bottom right of the parent container with a radius of 25% of the parent container
 
+let url = "https://aadikuchlous.github.io/aapti-digital-regulations";
 const data = {
   icons: {
-    it: '/icons/it.svg',
-    agriculture: '/icons/agri.svg',
-    medicine: '/icons/medicine.svg',
-    data: '/icons/data.svg',
-    geospatial: '/icons/geospatial.svg',
-    education: '/icons/edu.svg',
-    ai: '/icons/ai.svg',
-    broadcast: '/icons/broadcast.svg',
-    finance: '/icons/finance.svg',
-    transport: '/icons/aviation.svg',
-    cyber: '/icons/cybersecurity.svg',
-    labour: '/icons/labour.svg',
-    gig: '/icons/gigwork.svg',
-    ecommerce: '/icons/ecommerce.svg',
+    it: `${url}/icons/it.svg`,
+    agriculture: `${url}/icons/agri.svg`,
+    medicine: `${url}/icons/medicine.svg`,
+    data: `${url}/icons/data.svg`,
+    geospatial: `${url}/icons/geospatial.svg`,
+    education: `${url}/icons/edu.svg`,
+    ai: `${url}/icons/ai.svg`,
+    broadcast: `${url}/icons/broadcast.svg`,
+    finance: `${url}/icons/finance.svg`,
+    transport: `${url}/icons/aviation.svg`,
+    cyber: `${url}/icons/cybersecurity.svg`,
+    labour: `${url}/icons/labour.svg`,
+    gig: `${url}/icons/gigwork.svg`,
+    ecommerce: `${url}/icons/ecommerce.svg`,
   },
   circles: [
       {

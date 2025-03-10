@@ -40,10 +40,9 @@ class ListOfDocumentsCategory extends HTMLElement {
     const header = document.createElement('div');
     header.id = "category-header";
 
-    const url = "https://aadikuchlous.github.io/aapti-digital-regulations";
     const header_icon = document.createElement('img');
     header_icon.id = "category-icon";
-    header_icon.src = `${url}${data.icons[category]}`;
+    header_icon.src = data.icons[category];
     header_icon.alt = category;
     header.appendChild(header_icon);
 
