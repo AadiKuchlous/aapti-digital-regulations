@@ -24,7 +24,7 @@ const data = {
   circles: [
       {
           id: "it",
-          link: "/it.html",
+          link: "it.html",
           parent: "global",
           title: "IT Act & Associated Framework",
           color: "#1da8f0",
@@ -76,7 +76,7 @@ const data = {
       },
       {
           id: "agriculture",
-          link: "/agriculture.html",
+          link: "agriculture.html",
           title: "Agriculture",
           color: "#0fa689",
           x: 0.2,
@@ -97,7 +97,7 @@ const data = {
       },
       {
           id: "medicine",
-          link: "/medicine.html",
+          link: "medicine.html",
           title: "Medicine",
           color: "#14cdd4",
           x: 0.07,
@@ -138,7 +138,7 @@ const data = {
       },
       {
         id: "data",
-        link: "/data.html",
+        link: "data.html",
         title: "Data",
         color: "#cee741",
         x: -0.08,
@@ -174,7 +174,7 @@ const data = {
     },
     {
       id: "geospatial",
-      link: "/geospatial.html",
+      link: "geospatial.html",
       title: "Geospatial Data",
       color: "#cee741",
       x: -0.1,
@@ -185,7 +185,7 @@ const data = {
     },
     {
       id: "education",
-      link: "/education.html",
+      link: "education.html",
       title: "Education",
       color: "#414bb2",
       x: 0.22,
@@ -231,7 +231,7 @@ const data = {
     },
     {
       id: "ai",
-      link: "/ai.html",
+      link: "ai.html",
       title: "AI",
       color: "#652cb3",
       x: 0.35,
@@ -252,7 +252,7 @@ const data = {
     },
     {
       id: "broadcast",
-      link: "/broadcast.html",
+      link: "broadcast.html",
       title: "Boradcasting & Telecommunication",
       color: "#db6bee",
       x: 0.22,
@@ -288,7 +288,7 @@ const data = {
     },
     {
       id: "finance",
-      link: "/finance.html",
+      link: "finance.html",
       title: "Finance",
       color: "#f7b5b5",
       x: 0.05,
@@ -324,7 +324,7 @@ const data = {
     },
     {
       id: "cyber",
-      link: "/cybersecurity.html",
+      link: "cybersecurity.html",
       title: "Cybersecurity",
       color: "#f14725",
       x: 0.07,
@@ -360,7 +360,7 @@ const data = {
     },
     {
       id: "transport_aiviation",
-      link: "/transport_aviation.html",
+      link: "transport_aviation.html",
       title: "Transport & Aviation",
       color: "#fef445",
       x: -0.2,
@@ -381,7 +381,7 @@ const data = {
     },
     {
       id: "labour",
-      link: "/labour.html",
+      link: "labour.html",
       title: "Labour & Social Welfare",
       title_low: true,
       color: "#fac712",
@@ -398,7 +398,7 @@ const data = {
     },
     {
       id: "gig",
-      link: "/gig_work.html",
+      link: "gig_work.html",
       title: "Gig Work",
       title_low: true,
       color: "#fac712",
@@ -415,7 +415,7 @@ const data = {
     },
     {
       id: "ecommerce",
-      link: "/ecommerce.html",
+      link: "ecommerce.html",
       title: "E-Commerce",
       color: "#ed5850",
       x: -0.11,

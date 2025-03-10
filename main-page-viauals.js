@@ -91,7 +91,7 @@ svg.selectAll("circle").on("dblclick", (event, d) => {
   
 })
 .on("click", (event, d) => {
-  window.location.href = `category${d.link}`;
+  window.location.href = new URL(`category/${d.id}.html`, window.location.href);
 });
 
 
