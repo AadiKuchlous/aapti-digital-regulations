@@ -1,4 +1,5 @@
 import { data } from '../data.js';
+import { showSideModal } from "./side-modal.js";
 
 class ListOfDocumentsCategory extends HTMLElement {
   constructor() {

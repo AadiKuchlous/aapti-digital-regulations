@@ -1,4 +1,5 @@
 import { data } from "./data.js";
+import { showSideModal } from "./components/side-modal.js";
 import { min, calculateCoordFromRelative, calculateRelativeValue } from "./utils.js";
 
 const height = window.innerHeight * 10;
@@ -141,31 +142,6 @@ document.querySelectorAll(".box").forEach(box => {
 document.querySelectorAll(".box").forEach(box => {
   let computedFontSize = GLOBAL_CIRCLE_RADIUS * 0.005;
   box.style.fontSize = `${computedFontSize}px`;
-});
-
-
-function showSideModal(data) {
-    const sideModal = document.getElementById("side-modal-container");
-
-    sideModal.setAttribute("document-id", data.id);
-    sideModal.classList.add("open");
-
-}
-
-// Close the side modal when clicking outside of it
-document.addEventListener("click", function(event) {
-    const sideModal = document.getElementById("side-modal-container");
-    const isClickInsideModal = sideModal.contains(event.target);
-    const isClickOnBox = event.target.closest(".box");
-
-    if (!isClickInsideModal && !isClickOnBox && sideModal.classList.contains("open")) {
-        sideModal.classList.remove("open");
-    }
-});
-
-// Prevent closing when clicking inside the modal
-document.querySelector("#side-modal-container").addEventListener("click", function(event) {
-    event.stopPropagation();
 });
 
 // Handle window resize

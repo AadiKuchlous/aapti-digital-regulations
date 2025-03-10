@@ -191,13 +191,12 @@ class SideModal extends HTMLElement {
         let link = document.createElement("a");
         let img = document.createElement("img");
         img.src = data.icons[element];
-        link.href = `/category/${element}.html`;
+        link.href = new URL(`category/${element}.html`, window.location.href);
         link.target = "_blank";
         link.appendChild(img);
         this.shadowRoot.querySelector('#modal-document-categories').append(link);
       });
     }
-
   }
 
   connectedCallback() {
@@ -210,3 +209,29 @@ class SideModal extends HTMLElement {
 }
 
 customElements.define('side-modal', SideModal);
+
+function showSideModal(data) {
+  const sideModal = document.querySelector("side-modal");
+
+  sideModal.setAttribute("document-id", data.id);
+  sideModal.classList.add("open");
+
+}
+  
+// Close the side modal when clicking outside of it
+  document.addEventListener("click", function(event) {
+    const sideModal = document.querySelector("side-modal");
+    const isClickInsideModal = sideModal.contains(event.target);
+    const isClickOnBox = event.target.closest(".box");
+
+    if (!isClickInsideModal && !isClickOnBox && sideModal.classList.contains("open")) {
+        sideModal.classList.remove("open");
+    }
+  });
+  
+  // Prevent closing when clicking inside the modal
+  document.querySelector("side-modal").addEventListener("click", function(event) {
+      event.stopPropagation();
+  });
+
+  export {showSideModal};
