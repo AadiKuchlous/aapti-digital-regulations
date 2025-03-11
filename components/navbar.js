@@ -57,7 +57,6 @@ class NavbarDropdown extends HTMLElement {
 
     let ids = this.getAttribute('links').split(', ');
     ids.sort().forEach(id => {
-      console.log(id);
       let a = document.createElement('a');
       let thisData = data.containers.find(category => category.id === id);
       a.href = data.links[thisData.id];
@@ -88,6 +87,7 @@ class CustomNavbar extends HTMLElement {
     const style = document.createElement('style');
     style.textContent = `
       #custom-navbar {
+        font-family: 'DM Sans', sans-serif;
         background-color: rgb(51 51 51 / 67%);
         overflow: visible;
         position: fixed;

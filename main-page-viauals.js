@@ -111,7 +111,7 @@ const boxes = containers.selectAll("g")
       })))
     .enter()
     .append("g")
-    .attr("class", "box")
+    .attr("class", "box opens-modal")
     .attr("id", d => d.id)
     .attr("transform", d => `translate(${d.myX}, ${d.myY})`);
 
@@ -125,6 +125,7 @@ boxes.append("foreignObject")
     .attr("class", "box-content")
     .on("click", (event, d) => {
       showSideModal(d);
+      event.stopPropagation();
     })
     .text(d => d.title)
     .append(d => {

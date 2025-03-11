@@ -14,13 +14,25 @@ class ListOfDocumentsCategory extends HTMLElement {
   }
 
   render(category, title) {
+    const colour = data.containers.find(d => d.id === category).color;
     const style = document.createElement('style');
     style.textContent = `
+      :host {
+        display: block;
+        height: 100vh;
+        width: 100vw;
+        padding-top: 5em;
+        padding-left: 2em;
+        background-color: ${colour};
+        font-family: 'IBM Plex Sans', sans-serif;
+      }
       #category-header {
+        font-family: 'DM Sans', sans-serif;
         display: flex;
         justify-content: flex-start;
         align-items: center;
         margin-bottom: 1em;
+        column-gap: 1em;
       }
 
       #category-icon {
@@ -62,6 +74,16 @@ class ListOfDocumentsCategory extends HTMLElement {
     documents.forEach(curDocument => {
       const listItem = document.createElement('li');
       listItem.textContent = curDocument.title;
+
+      const button = document.createElement('button');
+      button.classList.add('opens-modal');
+      button.textContent = "View";
+      listItem.appendChild(button);
+      button.addEventListener('click', (e) => {
+        showSideModal(curDocument);
+        e.stopPropagation();
+      });
+
       list.appendChild(listItem);
     });
 

@@ -200,7 +200,7 @@ class SideModal extends HTMLElement {
   }
 
   connectedCallback() {
-    this.shadowRoot.querySelector('#close-modal').addEventListener('click', () => document.querySelector("#side-modal-container").classList.remove('open'));
+    this.shadowRoot.querySelector('#close-modal').addEventListener('click', () => document.querySelector("side-modal").classList.remove('open'));
   }
 
   disconnectedCallback() {
@@ -215,16 +215,16 @@ function showSideModal(data) {
 
   sideModal.setAttribute("document-id", data.id);
   sideModal.classList.add("open");
-
+  sideModal.classList.add("testing");
+  console.log(sideModal.classList);
 }
   
 // Close the side modal when clicking outside of it
   document.addEventListener("click", function(event) {
     const sideModal = document.querySelector("side-modal");
     const isClickInsideModal = sideModal.contains(event.target);
-    const isClickOnBox = event.target.closest(".box");
 
-    if (!isClickInsideModal && !isClickOnBox && sideModal.classList.contains("open")) {
+    if (!isClickInsideModal) {
         sideModal.classList.remove("open");
     }
   });
