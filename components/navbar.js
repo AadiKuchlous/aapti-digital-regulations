@@ -1,3 +1,5 @@
+import { data } from '../data.js';
+
 class CustomNavbar extends HTMLElement {
   constructor() {
     super();
@@ -19,9 +21,13 @@ class CustomNavbar extends HTMLElement {
         margin: 0;
         padding: 0;
         display: flex;
+        justify-content: center;
       }
-      .navbar-li {
-        float: left;
+      #title.navbar-li {
+      }
+      #home-link.navbar-li {
+        position: absolute;
+        left: 0;
       }
       .navbar-a {
         display: block;
@@ -40,15 +46,15 @@ class CustomNavbar extends HTMLElement {
     nav.id = 'custom-navbar';
     nav.innerHTML = `
       <ul class="navbar-ul">
-      <li class="navbar-li">
-        <a class="navbar-a" href="/index.html">
+      <li class="navbar-li" id="home-link">
+        <a class="navbar-a" href="${data.homeurl}">
         <svg class="navbar-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
           <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
         </svg>
         </a>
       </li>
-      <li class="navbar-li">
-        <a class="navbar-a" href="#">
+      <li class="navbar-li" id="title">
+        <a class="navbar-a" href="${data.homeurl}">
         Aapti - Digital Regulations
         </a>
       </li>

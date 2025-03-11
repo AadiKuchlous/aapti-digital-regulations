@@ -5,6 +5,7 @@
 
 let url = "https://aadikuchlous.github.io/aapti-digital-regulations";
 const data = {
+  homeurl: `${url}/index.html`,
   icons: {
     it: `${url}/icons/it.svg`,
     agriculture: `${url}/icons/agri.svg`,
