@@ -9,7 +9,7 @@ class CustomNavbar extends HTMLElement {
     const style = document.createElement('style');
     style.textContent = `
       #custom-navbar {
-        background-color: #333;
+        background-color: rgb(51 51 51 / 67%);
         overflow: hidden;
         position: fixed;
         top: 0;
