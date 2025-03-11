@@ -97,7 +97,7 @@ svg.selectAll("rect").on("dblclick", (event, d) => {
   
 })
 .on("click", (event, d) => {
-  window.location.href = new URL(`category/${d.id}.html`, window.location.href);
+  window.location.href = data.links[d.id];
 });
 
 

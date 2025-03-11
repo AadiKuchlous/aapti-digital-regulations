@@ -4,28 +4,45 @@
 // Ex. x: 0.5, y: 0.5, radius: 0.25 would place the container in the bottom right of the parent container with a radius of 25% of the parent container
 
 let url = "https://aadikuchlous.github.io/aapti-digital-regulations";
+let iconurl = `${url}/icons/`;
+let categoryurl = `${url}/category/`;
 const data = {
   homeurl: `${url}/index.html`,
   icons: {
-    it: `${url}/icons/it.svg`,
-    agriculture: `${url}/icons/agri.svg`,
-    medicine: `${url}/icons/medicine.svg`,
-    data: `${url}/icons/data.svg`,
-    geospatial: `${url}/icons/geospatial.svg`,
-    education: `${url}/icons/edu.svg`,
-    ai: `${url}/icons/ai.svg`,
-    broadcast: `${url}/icons/broadcast.svg`,
-    finance: `${url}/icons/finance.svg`,
-    transport: `${url}/icons/aviation.svg`,
-    cyber: `${url}/icons/cybersecurity.svg`,
-    labour: `${url}/icons/labour.svg`,
-    gig: `${url}/icons/gigwork.svg`,
-    ecommerce: `${url}/icons/ecommerce.svg`,
+    it: `${iconurl}it.svg`,
+    agriculture: `${iconurl}agri.svg`,
+    medicine: `${iconurl}medicine.svg`,
+    data: `${iconurl}data.svg`,
+    geospatial: `${iconurl}geospatial.svg`,
+    education: `${iconurl}edu.svg`,
+    ai: `${iconurl}ai.svg`,
+    broadcast: `${iconurl}broadcast.svg`,
+    finance: `${iconurl}finance.svg`,
+    transport: `${iconurl}aviation.svg`,
+    cyber: `${iconurl}cybersecurity.svg`,
+    labour: `${iconurl}labour.svg`,
+    gig: `${iconurl}gigwork.svg`,
+    ecommerce: `${iconurl}ecommerce.svg`,
+  },
+  links: {
+    it: `${categoryurl}it.html`,
+    agriculture: `${categoryurl}agriculture.html`,
+    medicine: `${categoryurl}medicine.html`,
+    data: `${categoryurl}data.html`,
+    geospatial: `${categoryurl}geospatial.html`,
+    education: `${categoryurl}education.html`,
+    ai: `${categoryurl}ai.html`,
+    broadcast: `${categoryurl}broadcast.html`,
+    finance: `${categoryurl}finance.html`,
+    transport: `${categoryurl}transport_aviation.html`,
+    cyber: `${categoryurl}cybersecurity.html`,
+    labour: `${categoryurl}labour.html`,
+    gig: `${categoryurl}gigwork.html`,
+    ecommerce: `${categoryurl}ecommerce.html`,
   },
   containers: [
       {
           id: "it",
-          link: "it.html",
           parent: "global",
           title: "IT Act & Associated Framework",
           color: "#1da8f0",
@@ -77,7 +94,6 @@ const data = {
       },
       {
           id: "agriculture",
-          link: "agriculture.html",
           title: "Agriculture",
           color: "#0fa689",
           x: 0.2,
@@ -98,7 +114,6 @@ const data = {
       },
       {
           id: "medicine",
-          link: "medicine.html",
           title: "Medicine",
           color: "#14cdd4",
           x: 0.07,
@@ -139,7 +154,6 @@ const data = {
       },
       {
         id: "data",
-        link: "data.html",
         title: "Data",
         color: "#cee741",
         x: -0.08,
@@ -175,7 +189,6 @@ const data = {
     },
     {
       id: "geospatial",
-      link: "geospatial.html",
       title: "Geospatial Data",
       color: "#cee741",
       x: -0.1,
@@ -186,7 +199,6 @@ const data = {
     },
     {
       id: "education",
-      link: "education.html",
       title: "Education",
       color: "#414bb2",
       x: 0.22,
@@ -232,7 +244,6 @@ const data = {
     },
     {
       id: "ai",
-      link: "ai.html",
       title: "AI",
       color: "#652cb3",
       x: 0.35,
@@ -253,7 +264,6 @@ const data = {
     },
     {
       id: "broadcast",
-      link: "broadcast.html",
       title: "Boradcasting & Telecommunication",
       color: "#db6bee",
       x: 0.22,
@@ -289,7 +299,6 @@ const data = {
     },
     {
       id: "finance",
-      link: "finance.html",
       title: "Finance",
       color: "#f7b5b5",
       x: 0.05,
@@ -325,7 +334,6 @@ const data = {
     },
     {
       id: "cyber",
-      link: "cybersecurity.html",
       title: "Cybersecurity",
       color: "#f14725",
       x: 0.07,
@@ -360,8 +368,7 @@ const data = {
       ]
     },
     {
-      id: "transport_aiviation",
-      link: "transport_aviation.html",
+      id: "transport",
       title: "Transport & Aviation",
       color: "#fef445",
       x: -0.2,
@@ -382,7 +389,6 @@ const data = {
     },
     {
       id: "labour",
-      link: "labour.html",
       title: "Labour & Social Welfare",
       title_low: true,
       color: "#fac712",
@@ -399,7 +405,6 @@ const data = {
     },
     {
       id: "gig",
-      link: "gig_work.html",
       title: "Gig Work",
       title_low: true,
       color: "#fac712",
@@ -416,7 +421,6 @@ const data = {
     },
     {
       id: "ecommerce",
-      link: "ecommerce.html",
       title: "E-Commerce",
       color: "#ed5850",
       x: -0.11,
