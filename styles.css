@@ -11,15 +11,15 @@ body {
   background-image: url('bg.png');
 }
 
-h1, h2, h3, h4, h5, h6, .circle-title {
+h1, h2, h3, h4, h5, h6, .container-title {
   font-family: 'DM Sans';
 }
 
-.circle {
+.container {
   transition: opacity 0.2s;
 }
 
-.circle:hover {
+.container:hover {
   opacity: 0.8;
 }
 

@@ -7,8 +7,8 @@ const width = window.innerWidth * 10;
 
 const RECT_WIDTH = window.innerWidth / 5;
 const RECT_HEIGHT = RECT_WIDTH * 2;
-const GLOBAL_CIRCLE_RADIUS = min(width, height) / 2;
-const GLOBAL_CIRCLE_COORDS = {x: width / 2, y: height / 2};
+const GLOBAL_CONTAINER_RADIUS = min(width, height) / 2;
+const GLOBAL_CONTAINER_COORDS = {x: width / 2, y: height / 2};
 
 const defaultZoom = 0.1;
 
@@ -23,11 +23,11 @@ const svg = d3.select("#diagram")
 
 const global_group = svg.append("g").attr("id", "global-group");
 
-// Add a white circle to the center of the diagram
-const global_circle = global_group.append("circle")
-  .attr("cx", GLOBAL_CIRCLE_COORDS.x)
-  .attr("cy", GLOBAL_CIRCLE_COORDS.y)
-  .attr("r", GLOBAL_CIRCLE_RADIUS)
+// Add a white container to the center of the diagram
+const global_container = global_group.append("circle")
+  .attr("cx", GLOBAL_CONTAINER_COORDS.x)
+  .attr("cy", GLOBAL_CONTAINER_COORDS.y)
+  .attr("r", GLOBAL_CONTAINER_RADIUS)
   .attr("fill", "rgba(0,0,0,0)");
 
 // Add zoom functionality
@@ -44,40 +44,46 @@ svg.call(zoom);
 svg.on("dblclick.zoom", null); // Disable double-click zoom globally
 svg.call(zoom.transform, d3.zoomIdentity.scale(defaultZoom));
 
-// Create a group for each circle with the data
-const circles = global_group.selectAll("g")
-    .data(data.circles.map(circle => {
+// Create a group for each container with the data
+const containers = global_group.selectAll("g")
+    .data(data.containers.map(container => {
       return {
-        ...circle,
-        cx: calculateCoordFromRelative(circle.x, Number(global_circle.attr("cx")), Number(global_circle.attr("r"))*2),
-        cy: calculateCoordFromRelative(circle.y, Number(global_circle.attr("cy")), Number(global_circle.attr("r"))*2),
-        r: calculateRelativeValue(circle.radius, Number(global_circle.attr("r")))
+        ...container,
+        cx: calculateCoordFromRelative(container.x, Number(global_container.attr("cx")), Number(global_container.attr("r"))*2),
+        cy: calculateCoordFromRelative(container.y, Number(global_container.attr("cy")), Number(global_container.attr("r"))*2),
+        r: calculateRelativeValue(container.radius, Number(global_container.attr("r")))
       }
     }))
     .enter()
     .append("g");
 
-// Add a circle for each group
-circles.append("circle")
+// Add a container for each group
+containers.append("rect")
+    .attr("x", d => d.cx-d.r)
+    .attr("y", d => d.cy-d.r)
+    .attr("width", d => d.r*2)
+    .attr("height", d => d.r*2)
+    .attr("rx", d => d.r*0.1)
+    .attr("ry", d => d.r*0.1)
     .attr("cx", d => d.cx)
     .attr("cy", d => d.cy)
     .attr("r", d => d.r)
     .attr("fill", d => d.color)
     .attr("opacity", 0.5)
-    .attr("class", "circle")
+    .attr("class", "container")
     .attr("id", d => d.id);
 
-// Add a title to each circle
-circles.append("text")
+// Add a title to each container
+containers.append("text")
   .attr("x", d => calculateCoordFromRelative(0, Number(d3.select(`#${d.id}`).attr("cx")), Number(d3.select(`#${d.id}`).attr("r"))))
   .attr("y", d => calculateCoordFromRelative(d.title_low ? 0.7 : -0.6, Number(d3.select(`#${d.id}`).attr("cy")), Number(d3.select(`#${d.id}`).attr("r"))))
   .attr("text-anchor", "middle")
   .attr("font-size", "4em")
-  .attr("class", "circle-title")
+  .attr("class", "container-title")
   .text(d => d.title);
 
 // Handle double-click for zoom-to-fit functionality
-svg.selectAll("circle").on("dblclick", (event, d) => {
+svg.selectAll("rect").on("dblclick", (event, d) => {
   // Calculate the scale and translation to fit the element
   const newScale = Math.min(
     width / (2 * d.r),
@@ -95,8 +101,8 @@ svg.selectAll("circle").on("dblclick", (event, d) => {
 });
 
 
-//Add a group for each box in each circle with the data and onclick event
-const boxes = circles.selectAll("g")
+//Add a group for each box in each container with the data and onclick event
+const boxes = containers.selectAll("g")
     .data(d => d.boxes.map(box => (
       {...box, parent: d.id,
         myX: calculateCoordFromRelative(box.x, Number(d3.select(`#${d.id}`).attr("cx")), Number(d3.select(`#${d.id}`).attr("r"))),
@@ -140,7 +146,7 @@ document.querySelectorAll(".box").forEach(box => {
     mySVG.insertBefore(box, null);
 });
 document.querySelectorAll(".box").forEach(box => {
-  let computedFontSize = GLOBAL_CIRCLE_RADIUS * 0.005;
+  let computedFontSize = GLOBAL_CONTAINER_RADIUS * 0.005;
   box.style.fontSize = `${computedFontSize}px`;
 });
 

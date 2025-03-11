@@ -1,7 +1,7 @@
 // Description: Data for the visualization
 // All x, y, radius values are percentages of the width and height of it's parent container
-// Ex. x: 0, y: 0, radius: 0.25 would place the circle in the center of the parent container with a radius of 25% of the parent container
-// Ex. x: 0.5, y: 0.5, radius: 0.25 would place the circle in the bottom right of the parent container with a radius of 25% of the parent container
+// Ex. x: 0, y: 0, radius: 0.25 would place the container in the center of the parent container with a radius of 25% of the parent container
+// Ex. x: 0.5, y: 0.5, radius: 0.25 would place the container in the bottom right of the parent container with a radius of 25% of the parent container
 
 let url = "https://aadikuchlous.github.io/aapti-digital-regulations";
 const data = {
@@ -22,7 +22,7 @@ const data = {
     gig: `${url}/icons/gigwork.svg`,
     ecommerce: `${url}/icons/ecommerce.svg`,
   },
-  circles: [
+  containers: [
       {
           id: "it",
           link: "it.html",
